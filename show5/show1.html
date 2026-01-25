@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>مشاهدة فيلم - HaM سينما</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: "Arial", sans-serif;
+            background-color: #111;
+            color: #fff;
+        }
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            margin: 20px auto;
+        }
+        
+        iframe,
+        video {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .buttons {
+            text-align: center;
+            margin-top: 15px;
+        }
+        
+        button {
+            background-color: #1e90ff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 15px;
+        }
+        
+        button:hover {
+            background-color: #0d6efd;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <div class="buttons">
+        <button onclick="setServer(1)">السيرفر 1</button>
+        <button onclick="setServer(2)">السيرفر 2</button>
+        <button onclick="setServer(3)">السيرفر 3</button>
+
+
+    </div>
+
+    <div class="video-container">
+        <!-- iframe لتشغيل الفيلم أونلاين -->
+        <iframe id="video-frame" src=" https://still-dawn-0125.lansr1234567.workers.dev/z966xd1pq4xx?autoplay=1" allow="autoplay" allowfullscreen></iframe>
+
+        <!-- video مخفي لتشغيل الفيلم من الكاش -->
+        <video id="offline-video" style="display:none;" controls>
+      <source src="https://your-cdn-or-filemoon/video.mp4" type="video/mp4">
+    </video>
+    </div>
+
+    <!-- مكتبة idb -->
+    <script src="https://unpkg.com/idb@7/build/iife/index-min.js"></script>
+
+    سكربت الحفظ والتشغيل -->
+    <script>
+        async function saveOffline() {
+            const video = document.getElementById("offline-video");
+            const source = video.querySelector("source") || video;
+            const videoUrl = source.src;
+
+            const db = await idb.openDB("hamcinema", 1, {
+                upgrade(db) {
+                    if (!db.objectStoreNames.contains("videos")) {
+                        db.createObjectStore("videos");
+                    }
+                }
+            });
+
+            if (await db.get("videos", videoUrl)) {
+                alert("✅ الفيلم محفوظ بالفعل.");
+                return;
+            }
+
+            alert("📥 جارى حفظ الفيلم...");
+
+            const response = await fetch(videoUrl);
+            const reader = response.body.getReader();
+            const chunks = [];
+
+            while (true) {
+                const {
+                    done,
+                    value
+                } = await reader.read();
+                if (done || !value) break;
+                chunks.push(value);
+            }
+
+            const blob = new Blob(chunks, {
+                type: "video/mp4"
+            });
+            await db.put("videos", blob, videoUrl);
+
+            let episodes = JSON.parse(localStorage.getItem("offline-episodes") || "[]");
+            const title = document.title;
+            const thumbnail = "/poster.png";
+            const series = "movies";
+
+            if (!episodes.find(e => e.url === videoUrl)) {
+                episodes.push({
+                    url: videoUrl,
+                    title,
+                    thumbnail,
+                    series,
+                    time: 0
+                });
+                localStorage.setItem("offline-episodes", JSON.stringify(episodes));
+            }
+
+            alert("✅ تم حفظ الفيلم ويمكنك تشغيله بدون نت.");
+        }
+
+        async function playOffline() {
+            const video = document.getElementById("offline-video");
+            const iframe = document.getElementById("video-frame");
+            const videoUrl = video.querySelector("source").src;
+
+            const db = await idb.openDB("hamcinema", 1);
+            const blob = await db.get("videos", videoUrl);
+            if (!blob) {
+                alert("⚠️ الفيلم غير محفوظ بعد.");
+                return;
+            }
+
+            iframe.style.display = "none";
+            video.style.display = "block";
+
+            const blobUrl = URL.createObjectURL(blob);
+            video.src = blobUrl;
+
+            const episodes = JSON.parse(localStorage.getItem("offline-episodes") || "[]");
+            const ep = episodes.find(e => e.url === videoUrl);
+            if (ep && ep.time) video.currentTime = ep.time;
+
+            video.play();
+
+            // حفظ وقت التوقف
+            video.addEventListener("timeupdate", () => {
+                const episodes = JSON.parse(localStorage.getItem("offline-episodes") || "[]");
+                const ep = episodes.find(e => e.url === videoUrl);
+                if (ep) {
+                    ep.time = video.currentTime;
+                    localStorage.setItem("offline-episodes", JSON.stringify(episodes));
+                }
+            });
+        }
+    </script>
+    <script>
+        function setServer(serverNumber) {
+            const iframe = document.getElementById("video-frame");
+            const video = document.getElementById("offline-video");
+            const source = video.querySelector("source");
+
+            if (serverNumber === 1) {
+                // عرض iframe فقط (مثلاً Filemoon)
+                iframe.style.display = "block";
+                video.style.display = "none";
+
+                // تغيير رابط iframe لو حبيت
+                iframe.src = "https://still-dawn-0125.lansr1234567.workers.dev/z966xd1pq4xx?autoplay=1 "; // ✏️ غيّر الرابط لو محتاج
+
+            }
+            if (serverNumber === 2) {
+                // عرض iframe فقط (مثلاً Filemoon)
+                iframe.style.display = "block";
+                video.style.display = "none";
+
+                // تغيير رابط iframe لو حبيت
+                iframe.src = " https://still-dawn-0125.lansr1234567.workers.dev/rrz3btwuh14y?autoplay=1"; // ✏️ غيّر الرابط لو محتاج
+
+            } else if (serverNumber === 3) {
+                // عرض الفيديو المحلي أو من ok.ru
+                iframe.style.display = "none";
+                video.style.display = "block";
+
+                // تغيير سورس الفيديو
+                source.src = "https://pixeldrain.com/api/file/1oggBiL5 "; // ✏️ غيّر ده لرابط OK أو MP4
+                video.load();
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>
