@@ -1079,71 +1079,10 @@
             link: "show6/show018.html"
         }, ];
 
-        // ===== متغيرات للتمرير اللانهائي =====
-        let movieCardsClone = [];
-        let seriesCardsClone = [];
-        let isScrollingMovies = false;
-        let isScrollingSeries = false;
-
         // ===== متغيرات التمرير التلقائي =====
         let autoScrollIntervalMovies;
         let autoScrollIntervalSeries;
         let autoScrollIntervalOffers;
-
-        // ===== دالة لإنشاء نسخة من الكروت للتمرير اللانهائي =====
-        function setupInfiniteScroll(container, items, type) {
-            const containerElement = document.getElementById(container);
-            if (!containerElement) return;
-
-            // تنظيف الحاوية أولاً
-            containerElement.innerHTML = '';
-
-            // إنشاء الكروت الأصلية
-            if (type === 'offers') {
-                containerElement.innerHTML = items.map((item, index) => createOfferCard(item, index)).join('');
-            } else {
-                containerElement.innerHTML = items.map((item, index) => createCard(item, type, index)).join('');
-            }
-
-            // إذا كان ليس "offers"، ننشئ نسخة مكررة للتمرير اللانهائي
-            if (type !== 'offers') {
-                // إنشاء نسخة مكررة من الكروت
-                const cards = Array.from(containerElement.children).map(card => card.cloneNode(true));
-
-                // إضافة النسخة المكررة
-                cards.forEach(card => {
-                    containerElement.appendChild(card);
-                });
-            }
-
-            // إضافة تأثيرات الزووم للكروت الجديدة
-            setTimeout(() => {
-                addZoomEffectsToContainer(containerElement);
-                addCardClickListenersToContainer(containerElement);
-            }, 100);
-        }
-
-        // ===== دالة لمعالجة التمرير اللانهائي =====
-        function handleInfiniteScroll(containerId, type) {
-            const container = document.getElementById(containerId);
-            if (!container) return;
-
-            container.addEventListener('scroll', function() {
-                // حساب عرض الحاوية والعناصر
-                const scrollLeft = container.scrollLeft;
-                const scrollWidth = container.scrollWidth;
-                const clientWidth = container.clientWidth;
-
-                // إذا وصلنا للنهاية (مع هامش 50px)
-                if (scrollLeft + clientWidth >= scrollWidth - 50) {
-                    // نرجع للنقطة الأولى بسلاسة
-                    container.scrollTo({
-                        left: 0,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        }
 
         // ===== دالة لبدء التمرير التلقائي =====
         function startAutoScroll(containerId, speed = 3000) {
@@ -1207,60 +1146,10 @@
             }
         }
 
-        // ===== دوال تأثير الزووم =====
-        function createZoomEffect(card) {
-            // إضافة تأثير الزووم عند المرور
-            card.addEventListener('mouseenter', function(e) {
-                // إيقاف التمرير التلقائي عند التمرير فوق الكارد
-                stopAutoScroll('cards-movies');
-                stopAutoScroll('cards-series');
-                stopAutoScroll('cards-offers');
-
-                this.style.zIndex = '100';
-                this.style.transition = 'all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
-
-                // تأثير الزووم حسب نوع الجهاز
-                const isMobile = window.innerWidth <= 768;
-                const zoomLevel = isMobile ? 1.12 : 1.15;
-
-                this.style.transform = `scale(${zoomLevel})`;
-
-                // إضافة تأثيرات إضافية
-                this.style.boxShadow =
-                    '0 25px 50px rgba(0, 0, 0, 0.7), ' +
-                    '0 0 40px rgba(57, 255, 20, 0.6), ' +
-                    '0 0 80px rgba(102, 252, 241, 0.4)';
-
-                // إضافة طبقة شفافة للزيادة في التأثير
-                const overlay = document.createElement('div');
-                overlay.className = 'zoom-overlay';
-                this.appendChild(overlay);
-            });
-
-            card.addEventListener('mouseleave', function(e) {
-                // استئناف التمرير التلقائي عند مغادرة الكارد
-                setTimeout(() => {
-                    startAutoScroll('cards-movies');
-                    startAutoScroll('cards-series');
-                    startAutoScroll('cards-offers');
-                }, 1000);
-
-                this.style.zIndex = '1';
-                this.style.transform = 'scale(1)';
-                this.style.boxShadow = '0 10px 20px rgba(0, 0, 0, 0.3)';
-
-                // إزالة الطبقة الشفافة
-                const overlay = this.querySelector('.zoom-overlay');
-                if (overlay) {
-                    overlay.remove();
-                }
-            });
-        }
-
-        // ===== الدوال الأساسية =====
+        // ===== دوال إنشاء الكروت =====
         function createCard(item, type, index) {
             return `
-                <div class="card" data-link="${item.link}" data-type="${type}">
+                <div class="card" data-link="${item.link}">
                     <div class="poster">
                         <img src="${item.image}" alt="${item.title}" loading="lazy">
                     </div>
@@ -1276,362 +1165,271 @@
                     </div>
                 </div>
             `;
-        }
+            }
 
-        function createOfferCard(item, index) {
-            return `
+            function createOfferCard(item, index) {
+                return `
                 <div class="offer-card" data-link="${item.link}">
                     <img src="${item.image}" alt="${item.title}" loading="lazy">
                 </div>
             `;
-        }
+            }
 
-        function renderCards(containerId, items, type) {
-            const container = document.getElementById(containerId);
-            if (container) {
-                if (type === 'offers') {
-                    container.innerHTML = items.map((item, index) => createOfferCard(item, index)).join('');
-                } else {
-                    container.innerHTML = items.map((item, index) => createCard(item, type, index)).join('');
+            // ===== دالة عرض الكروت =====
+            function renderCards(containerId, items, type) {
+                const container = document.getElementById(containerId);
+                if (container) {
+                    if (type === 'offers') {
+                        container.innerHTML = items.map((item, index) => createOfferCard(item, index)).join('');
+                    } else {
+                        container.innerHTML = items.map((item, index) => createCard(item, type, index)).join('');
+                    }
                 }
             }
-        }
 
-        function addZoomEffectsToContainer(container) {
-            const cards = container.querySelectorAll('.card, .offer-card');
-            cards.forEach(card => {
-                createZoomEffect(card);
-            });
-        }
-
-        function addCardClickListenersToContainer(container) {
-            const cards = container.querySelectorAll('.card, .offer-card');
-            cards.forEach(card => {
-                card.addEventListener('click', function(e) {
-                    const link = this.getAttribute('data-link');
-                    if (link) {
-                        window.open(link, '_blank');
-                    }
-                });
-            });
-        }
-
-        function initScrollButtons() {
-            // أفلام
-            const moviesLeft = document.querySelector('.movies-left');
-            const moviesRight = document.querySelector('.movies-right');
-            
-            if (moviesLeft) {
-                moviesLeft.addEventListener('click', () => {
-                    const container = document.getElementById('cards-movies');
-                    container.scrollBy({ left: -300, behavior: 'smooth' });
-                    // إيقاف وإعادة بدء التمرير التلقائي بعد النقر
-                    stopAutoScroll('cards-movies');
-                    setTimeout(() => startAutoScroll('cards-movies'), 5000);
-                });
-            }
-            
-            if (moviesRight) {
-                moviesRight.addEventListener('click', () => {
-                    const container = document.getElementById('cards-movies');
-                    container.scrollBy({ left: 300, behavior: 'smooth' });
-                    // إيقاف وإعادة بدء التمرير التلقائي بعد النقر
-                    stopAutoScroll('cards-movies');
-                    setTimeout(() => startAutoScroll('cards-movies'), 5000);
-                });
-            }
-
-            // مسلسلات
-            const seriesLeft = document.querySelector('.series-left');
-            const seriesRight = document.querySelector('.series-right');
-            
-            if (seriesLeft) {
-                seriesLeft.addEventListener('click', () => {
-                    const container = document.getElementById('cards-series');
-                    container.scrollBy({ left: -300, behavior: 'smooth' });
-                    // إيقاف وإعادة بدء التمرير التلقائي بعد النقر
-                    stopAutoScroll('cards-series');
-                    setTimeout(() => startAutoScroll('cards-series'), 5000);
-                });
-            }
-            
-            if (seriesRight) {
-                seriesRight.addEventListener('click', () => {
-                    const container = document.getElementById('cards-series');
-                    container.scrollBy({ left: 300, behavior: 'smooth' });
-                    // إيقاف وإعادة بدء التمرير التلقائي بعد النقر
-                    stopAutoScroll('cards-series');
-                    setTimeout(() => startAutoScroll('cards-series'), 5000);
-                });
-            }
-        }
-
-        function initSearch() {
-            const searchInput = document.querySelector('.search-header__input');
-            const searchButton = document.querySelector('.search-header__button');
-            
-            function search() {
-                const query = searchInput.value.toLowerCase().trim();
+            // ===== دالة إضافة مستمعات النقر =====
+            function addCardClickListeners() {
+                // إضافة event listener واحد فقط لكل الكروت
+                const allCards = document.querySelectorAll('.card, .offer-card');
                 
-                if (query === '') {
-                    setupInfiniteScroll('cards-movies', movies, 'movies');
-                    setupInfiniteScroll('cards-series', series, 'series');
-                    renderCards('cards-offers', offers, 'offers');
-                    // إعادة تشغيل التمرير التلقائي
-                    setTimeout(() => {
-                        startAutoScroll('cards-movies');
-                        startAutoScroll('cards-series');
-                        startAutoScroll('cards-offers');
-                    }, 500);
-                    return;
-                }
-                
-                const filteredMovies = movies.filter(movie => 
-                    movie.title.toLowerCase().includes(query) || 
-                    movie.description.toLowerCase().includes(query)
-                );
-                
-                const filteredSeries = series.filter(serie => 
-                    serie.title.toLowerCase().includes(query) || 
-                    serie.description.toLowerCase().includes(query)
-                );
-                
-                const filteredOffers = offers.filter(offer => 
-                    offer.title.toLowerCase().includes(query)
-                );
-                
-                renderCards('cards-movies', filteredMovies, 'movies');
-                renderCards('cards-series', filteredSeries, 'series');
-                renderCards('cards-offers', filteredOffers, 'offers');
-                
-                // إعادة إضافة تأثير الزووم للكروت الجديدة
-                setTimeout(() => {
-                    addZoomEffects();
-                }, 100);
-            }
-            
-            if (searchButton) {
-                searchButton.addEventListener('click', search);
-            }
-            
-            if (searchInput) {
-                searchInput.addEventListener('keypress', (e) => {
-                    if (e.key === 'Enter') search();
-                });
-            }
-        }
-
-        function addCardClickListeners() {
-            // إضافة event listener لجميع الكروت
-            const allCards = document.querySelectorAll('.card, .offer-card');
-            
-            allCards.forEach(card => {
-                // عند النقر على الكارد
-                card.addEventListener('click', function(e) {
-                    const link = this.getAttribute('data-link');
-                    if (link) {
-                        window.open(link, '_blank');
-                    }
-                });
-            });
-        }
-
-        function addZoomEffects() {
-            // إضافة تأثير الزووم لجميع الكروت
-            const allCards = document.querySelectorAll('.card, .offer-card');
-            
-            allCards.forEach(card => {
-                createZoomEffect(card);
-            });
-        }
-
-        function initPage() {
-            // إخفاء شريط التحميل
-            const loadingBar = document.getElementById('loading-bar');
-            if (loadingBar) {
-                setTimeout(() => {
-                    loadingBar.style.opacity = '0';
-                    setTimeout(() => {
-                        loadingBar.style.display = 'none';
-                    }, 500);
-                }, 1500);
-            }
-
-            // تحميل المحتوى مع التمرير اللانهائي
-            setupInfiniteScroll('cards-movies', movies, 'movies');
-            setupInfiniteScroll('cards-series', series, 'series');
-            renderCards('cards-offers', offers, 'offers');
-
-            // تهيئة التمرير اللانهائي
-            handleInfiniteScroll('cards-movies', 'movies');
-            handleInfiniteScroll('cards-series', 'series');
-
-            // إضافة event listeners للكروت
-            addCardClickListeners();
-            
-            // إضافة تأثير الزووم للكروت
-            addZoomEffects();
-
-            // تهيئة الأزرار
-            initScrollButtons();
-            initSearch();
-
-            // بدء التمرير التلقائي بعد تحميل الصفحة
-            setTimeout(() => {
-                startAutoScroll('cards-movies', 3500);
-                startAutoScroll('cards-series', 4000);
-                startAutoScroll('cards-offers', 3000);
-            }, 2000);
-
-            // زر "المزيد من العروض"
-            const loadMoreBtn = document.getElementById('load-more-offers');
-            if (loadMoreBtn) {
-                loadMoreBtn.addEventListener('click', function() {
-                    const newOffers = [           {
-                title: "كونغ فو باندا",
-                description: "",
-                image: "img/dany5/dany04.jpg",
-                link: "show6/show1.html"
-            }, {
-                title: "حكاية لعبه",
-                description: "",
-                image: "img/dany5/dany016.jpg",
-                link: "show6/show2.html"
-            }, {
-                title: "النمله والجراد",
-                description: "",
-                image: "img/dany5/dany013.jpg",
-                link: "show6/show3.html"
-            }, {
-                title: "عائلة روبنسون",
-                description: "",
-                image: "img/dany5/dany017.jpg",
-                link: "show6/show4.html"
-            }, {
-                title: "مزرعه فى خطر",
-                description: "",
-                image: "img/dany5/dany018.jpg",
-                link: "show6/show5.html"
-            }, {
-                title: "ليله فى المتحف",
-                description: "",
-                image: "img/dany5/dany019.jpg",
-                link: "show6/show6.html"
-            }, {
-                title: "مريدا",
-                description: "",
-                image: "img/dany5/dany011.jpg",
-                link: "show6/show7.html"
-            }, {
-                title: "بيت التنانين",
-                description: "",
-                image: "img/dany5/dany01.jpg",
-                link: "show6/show8.html"
-            }, {
-                title: "عصر الجليد",
-                description: "",
-                image: "img/dany5/dany08.jpg",
-                link: "show6/show9.html"
-            }, {
-                title: "ملكة الثلج",
-                description: "",
-                image: "img/dany5/dany02.jpg",
-                link: "show6/show10.html"
-            }, {
-                title: "الامبراطور 2000",
-                description: "",
-                image: "img/dany5/dany021.jpg",
-                link: "show6/show011.html"
-            }, {
-                title: "الامبراطور2004",
-                description: "",
-                image: "img/dany5/dany020.jpg",
-                link: "show6/show012.html"
-            }, {
-                title: "فوق  up",
-                description: "",
-                image: "img/dany5/dany023.jpg",
-                link: "show6/show013.html"
-            }, {
-                title: "فلم بن تن سر الاومتريكس",
-                description: "",
-                image: "img/dany5/dany024.jpg",
-                link: "show6/show014.html"
-            }, {
-                title: "قلبا وقالبا",
-                description: "inside out",
-                image: "img/dany5/dany022.jpg",
-                link: "show6/show015.html"
-            }, {
-                title: "الاسد الملك",
-                description: "سيمبا",
-                image: "img/dany5/dany025.jpg",
-                link: "show6/show016.html"
-            }, {
-                title: "كوكو",
-                description: "coco",
-                image: "img/dany5/dany026.jpg",
-                link: "show6/show017.html"
-            }, {
-                title: "كرتون روح",
-                description: "soul",
-                image: "img/dany5/dany027.jpg",
-                link: "show6/show018.html"
-            }, 
-                    ];
+                allCards.forEach(card => {
+                    // إزالة أي مستمعين سابقين
+                    card.removeEventListener('click', handleCardClick);
                     
-                    const container = document.getElementById('cards-offers');
-                    if (container) {
-                        newOffers.forEach(offer => {
-                            const card = document.createElement('div');
-                            card.className = 'offer-card';
-                            card.setAttribute('data-link', offer.link);
-                            
-                            card.innerHTML = `
-                                <img src="${offer.image}" alt="${offer.title}" loading="lazy">
-                            `;
-                            container.appendChild(card);
-                            
-                            // إضافة تأثير الزووم للكروت الجديدة
-                            createZoomEffect(card);
-                        });
-                        
-                        // إعادة إضافة event listeners للكروت الجديدة
+                    // إضافة مستمع جديد
+                    card.addEventListener('click', handleCardClick, false);
+                });
+            }
+
+            function handleCardClick(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                
+                const link = this.getAttribute('data-link');
+                if (link) {
+                    // فتح الرابط في نافذة جديدة مرة واحدة فقط
+                    window.open(link, '_blank');
+                }
+            }
+
+            // ===== دالة البحث =====
+            function initSearch() {
+                const searchInput = document.querySelector('.search-header__input');
+                const searchButton = document.querySelector('.search-header__button');
+                
+                function search() {
+                    const query = searchInput.value.toLowerCase().trim();
+                    
+                    if (query === '') {
+                        renderCards('cards-movies', movies, 'movies');
+                        renderCards('cards-series', series, 'series');
+                        renderCards('cards-offers', offers, 'offers');
+                        // إعادة إضافة مستمعات النقر
+                        setTimeout(() => {
+                            addCardClickListeners();
+                        }, 100);
+                        return;
+                    }
+                    
+                    const filteredMovies = movies.filter(movie => 
+                        movie.title.toLowerCase().includes(query) || 
+                        (movie.description && movie.description.toLowerCase().includes(query))
+                    );
+                    
+                    const filteredSeries = series.filter(serie => 
+                        serie.title.toLowerCase().includes(query) || 
+                        (serie.description && serie.description.toLowerCase().includes(query))
+                    );
+                    
+                    const filteredOffers = offers.filter(offer => 
+                        offer.title.toLowerCase().includes(query) || 
+                        (offer.description && offer.description.toLowerCase().includes(query))
+                    );
+                    
+                    renderCards('cards-movies', filteredMovies, 'movies');
+                    renderCards('cards-series', filteredSeries, 'series');
+                    renderCards('cards-offers', filteredOffers, 'offers');
+                    
+                    // إعادة إضافة مستمعات النقر للكروت الجديدة
+                    setTimeout(() => {
                         addCardClickListeners();
+                    }, 100);
+                }
+                
+                if (searchButton) {
+                    searchButton.addEventListener('click', search);
+                }
+                
+                if (searchInput) {
+                    searchInput.addEventListener('keypress', (e) => {
+                        if (e.key === 'Enter') search();
+                    });
+                }
+            }
+
+            // ===== دالة أزرار التمرير =====
+            function initScrollButtons() {
+                // أفلام
+                const moviesLeft = document.querySelector('.movies-left');
+                const moviesRight = document.querySelector('.movies-right');
+                
+                if (moviesLeft) {
+                    moviesLeft.addEventListener('click', () => {
+                        const container = document.getElementById('cards-movies');
+                        container.scrollBy({ left: -300, behavior: 'smooth' });
+                        stopAutoScroll('cards-movies');
+                        setTimeout(() => startAutoScroll('cards-movies'), 5000);
+                    });
+                }
+                
+                if (moviesRight) {
+                    moviesRight.addEventListener('click', () => {
+                        const container = document.getElementById('cards-movies');
+                        container.scrollBy({ left: 300, behavior: 'smooth' });
+                        stopAutoScroll('cards-movies');
+                        setTimeout(() => startAutoScroll('cards-movies'), 5000);
+                    });
+                }
+
+                // مسلسلات
+                const seriesLeft = document.querySelector('.series-left');
+                const seriesRight = document.querySelector('.series-right');
+                
+                if (seriesLeft) {
+                    seriesLeft.addEventListener('click', () => {
+                        const container = document.getElementById('cards-series');
+                        container.scrollBy({ left: -300, behavior: 'smooth' });
+                        stopAutoScroll('cards-series');
+                        setTimeout(() => startAutoScroll('cards-series'), 5000);
+                    });
+                }
+                
+                if (seriesRight) {
+                    seriesRight.addEventListener('click', () => {
+                        const container = document.getElementById('cards-series');
+                        container.scrollBy({ left: 300, behavior: 'smooth' });
+                        stopAutoScroll('cards-series');
+                        setTimeout(() => startAutoScroll('cards-series'), 5000);
+                    });
+                }
+            }
+
+            // ===== دالة تحميل المزيد =====
+            function initLoadMore() {
+                const loadMoreBtn = document.getElementById('load-more-offers');
+                if (loadMoreBtn) {
+                    loadMoreBtn.addEventListener('click', function() {
+                        const newOffers = [
+                            {
+                                title: "كونغ فو باندا 2",
+                                description: "",
+                                image: "img/dany5/dany04.jpg",
+                                link: "show6/show1.html"
+                            },
+                            {
+                                title: "حكاية لعبة 2",
+                                description: "",
+                                image: "img/dany5/dany016.jpg",
+                                link: "show6/show2.html"
+                            },
+                            {
+                                title: "عصر الجليد 2",
+                                description: "",
+                                image: "img/dany5/dany08.jpg",
+                                link: "show6/show9.html"
+                            },
+                            {
+                                title: "ملكة الثلج 2",
+                                description: "",
+                                image: "img/dany5/dany02.jpg",
+                                link: "show6/show10.html"
+                            }
+                        ];
                         
-                        this.textContent = 'تم تحميل جميع العروض';
-                        this.disabled = true;
-                        
-                        // إضافة تأثير عند التحميل
-                        container.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                        const container = document.getElementById('cards-offers');
+                        if (container) {
+                            newOffers.forEach(offer => {
+                                const card = document.createElement('div');
+                                card.className = 'offer-card';
+                                card.setAttribute('data-link', offer.link);
+                                
+                                card.innerHTML = `
+                                    <img src="${offer.image}" alt="${offer.title}" loading="lazy">
+                                `;
+                                container.appendChild(card);
+                            });
+                            
+                            // إعادة إضافة مستمعات النقر
+                            setTimeout(() => {
+                                addCardClickListeners();
+                            }, 100);
+                            
+                            this.textContent = 'تم تحميل جميع العروض';
+                            this.disabled = true;
+                        }
+                    });
+                }
+            }
+
+            // ===== تهيئة الصفحة =====
+            function initPage() {
+                // إخفاء شريط التحميل
+                const loadingBar = document.getElementById('loading-bar');
+                if (loadingBar) {
+                    setTimeout(() => {
+                        loadingBar.style.opacity = '0';
+                        setTimeout(() => {
+                            loadingBar.style.display = 'none';
+                        }, 500);
+                    }, 1500);
+                }
+
+                // عرض الكروت
+                renderCards('cards-movies', movies, 'movies');
+                renderCards('cards-series', series, 'series');
+                renderCards('cards-offers', offers, 'offers');
+
+                // إضافة مستمعات النقر
+                setTimeout(() => {
+                    addCardClickListeners();
+                }, 100);
+
+                // تهيئة الميزات
+                initSearch();
+                initScrollButtons();
+                initLoadMore();
+
+                // بدء التمرير التلقائي
+                setTimeout(() => {
+                    startAutoScroll('cards-movies', 3500);
+                    startAutoScroll('cards-series', 4000);
+                    startAutoScroll('cards-offers', 3000);
+                }, 2000);
+
+                // إيقاف التمرير التلقائي عند ترك الصفحة
+                document.addEventListener('visibilitychange', function() {
+                    if (document.hidden) {
+                        stopAutoScroll('cards-movies');
+                        stopAutoScroll('cards-series');
+                        stopAutoScroll('cards-offers');
+                    } else {
+                        setTimeout(() => {
+                            startAutoScroll('cards-movies', 3500);
+                            startAutoScroll('cards-series', 4000);
+                            startAutoScroll('cards-offers', 3000);
+                        }, 1000);
                     }
                 });
             }
-            
-            // إيقاف التمرير التلقائي عند ترك النافذة
-            document.addEventListener('visibilitychange', function() {
-                if (document.hidden) {
-                    stopAutoScroll('cards-movies');
-                    stopAutoScroll('cards-series');
-                    stopAutoScroll('cards-offers');
-                } else {
-                    setTimeout(() => {
-                        startAutoScroll('cards-movies', 3500);
-                        startAutoScroll('cards-series', 4000);
-                        startAutoScroll('cards-offers', 3000);
-                    }, 1000);
-                }
-            });
-        }
 
-        // تشغيل الصفحة عند التحميل
-        document.addEventListener('DOMContentLoaded', initPage);
-        
-        // دالة آمنة لتغيير الحلقة
-        window.changeEpisode = function(episode) {
-            window.currentEpisode = episode;
-            console.log("تم تغيير الحلقة إلى:", episode);
-        };
+            // تشغيل الصفحة عند التحميل
+            document.addEventListener('DOMContentLoaded', initPage);
+            
+            // دالة آمنة لتغيير الحلقة
+            window.changeEpisode = function(episode) {
+                window.currentEpisode = episode;
+                console.log("تم تغيير الحلقة إلى:", episode);
+            };
     </script>
 </body>
 
