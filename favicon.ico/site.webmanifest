@@ -1,1 +1,20 @@
-{"name":"","short_name":"","icons":[{"src":"/android-chrome-192x192.png","sizes":"192x192","type":"image/png"},{"src":"/android-chrome-512x512.png","sizes":"512x512","type":"image/png"}],"theme_color":"#ffffff","background_color":"#ffffff","display":"standalone"}
+{
+    "name": "HaM كرتون",
+    "short_name": "HaM كرتون",
+    "description": "مشاهدة جميع أفلام ومسلسلات الكرتون والأنمي مجانًا بجودة عالية.",
+    "start_url": "/ham3/index.html",
+    "display": "standalone",
+    "background_color": "#0b0c10",
+    "theme_color": "#0b0c10",
+    "icons": [{
+            "src": "/ham3/favicon.ico/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/ham3/favicon.ico/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
