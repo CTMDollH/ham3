@@ -3,41 +3,104 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="theme-color" content="#0a0c0f">
-    <meta name="msapplication-TileColor" content="#0a0c0f">
+    <!-- Theme Colors -->
+    <meta name="theme-color" content="#0b0c10">
+    <meta name="msapplication-TileColor" content="#0b0c10">
 
+    <!-- Favicon / Icons -->
     <link rel="icon" href="/ham3/favicon.ico/favicon.ico">
     <link rel="icon" type="image/png" sizes="16x16" href="/ham3/favicon.ico/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/ham3/favicon.ico/favicon-32x32.png">
     <link rel="apple-touch-icon" href="/ham3/favicon.ico/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="192x192" href="/ham3/favicon.ico/android-chrome-192x192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="/ham3/favicon.ico/android-chrome-512x512.png">
+
+    <!-- Manifest for PWA -->
     <link rel="manifest" href="/ham3/site.webmanifest">
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome للايقونات -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>مشاهدة أفلام ومسلسلات مجانًا | HaM كرتون</title>
-    <meta name="description" content="موقع HaM كرتون: مشاهدة جميع أفلام ومسلسلات الكرتون والأنمي مجانًا بجودة عالية">
+
+    <!-- Title محسن -->
+    <title>كرتون HaM- مشاهدة أفلام ومسلسلات كرتون أنمي مدبلجة مجاناً</title>
+
+    <!-- Meta Description & SEO محسنة -->
+    <meta name="description" content="كرتون هايبر: أكبر مكتبة أفلام ومسلسلات كرتون وأنمي مدبلجة ومترجمة مجاناً. شاهد الأسد الملك، فوق، كوكو، كونغ فو باندا، بن تن، حكاية لعبة، عصر الجليد، ملكة الثلج وأكثر. جودة HD">
+    <meta name="keywords" content="كرتون, أفلام كرتون, مسلسلات كرتون, أنمي, كرتون نتورك, سبيس تون, بن تن, كونغ فو باندا, حكاية لعبة, توم وجيري, سبونج بوب, كابتن ماجد, ون بيس, دراغون بول, الأسد الملك, فوق, كوكو, قلبا وقالبا, عصر الجليد, ملكة الثلج, مريدا, ديزني, بيكسار, كرتون مدبلج, أنمي مترجم, أفلام كرتون 2024, مسلسلات كرتون قديمة">
     <link rel="canonical" href="https://ctmdollh.github.io/ham3/">
     <meta name="google-site-verification" content="cbmrUZqhOBck9gavk0inoYqWikuNfn-Jlj9K5ca3nI0" />
+    <meta name="author" content="كرتون هايبر">
+    <meta name="robots" content="index, follow">
 
-    <meta property="og:title" content="مشاهدة أفلام ومسلسلات مجانًا | HaM كرتون">
-    <meta property="og:description" content="موقع HaM كرتون: مشاهدة جميع أفلام ومسلسلات الكرتون والأنمي مجانًا بجودة عالية HD">
+    <!-- Open Graph / Social Media محسن -->
+    <meta property="og:title" content="كرتون هايبر - مشاهدة أفلام ومسلسلات كرتون وأنمي مجاناً">
+    <meta property="og:description" content="أكبر موقع لمشاهدة أفلام ومسلسلات الكرتون والأنمي المدبلجة والمترجمة بجودة عالية HD">
     <meta property="og:image" content="https://ctmdollh.github.io/ham3/img/dany5/dany033.png">
     <meta property="og:url" content="https://ctmdollh.github.io/ham3/">
     <meta property="og:type" content="website">
+    <meta property="og:locale" content="ar_AR">
 
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="مشاهدة أفلام ومسلسلات مجانًا | HaM كرتون">
-    <meta name="twitter:description" content="موقع HaM كرتون: مشاهدة جميع أفلام ومسلسلات الكرتون والأنمي مجانًا بجودة عالية">
+    <meta name="twitter:title" content="كرتون هايبر - مشاهدة أفلام ومسلسلات كرتون وأنمي">
+    <meta name="twitter:description" content="أفلام ومسلسلات كرتون مدبلجة مجاناً بجودة عالية">
     <meta name="twitter:image" content="https://ctmdollh.github.io/ham3/img/dany5/dany033.png">
 
-    <meta name="keywords" content="كرتون, أفلام كرتون, مسلسلات كرتون">
-    <meta name="author" content="HaM Cinema Team">
-    <meta name="robots" content="index, follow">
+    <!-- Monetag -->
+    <meta name="monetag" content="b0ddbd6219e97ff8d3f2ff7dc2b61671">
 
     <style>
-        /* ===== Reset و الأساسيات ===== */
+        /* ========== RESET & VARIABLES ========== */
+        
+         :root {
+            --primary: #6C5CE7;
+            --primary-dark: #5A4BC7;
+            --secondary: #00D2FF;
+            --accent: #FF6B6B;
+            --dark: #0B0E17;
+            --dark-light: #1A1F2E;
+            --light: #F9FAFE;
+            --gray: #8A8F9F;
+            --success: #00B894;
+            --warning: #FDCB6E;
+            --danger: #FF7675;
+            --whatsapp: #25D366;
+            --telegram: #0088cc;
+            --bg-primary: #0B0E17;
+            --bg-secondary: #131724;
+            --bg-card: rgba(26, 31, 46, 0.7);
+            --text-primary: #FFFFFF;
+            --text-secondary: #B8BCC8;
+            --border-color: rgba(255, 255, 255, 0.1);
+            --shadow-sm: 0 5px 15px rgba(0, 0, 0, 0.3);
+            --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.4);
+            --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.5);
+            --shadow-primary: 0 10px 30px rgba(108, 92, 231, 0.3);
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            --border-radius: 16px;
+            --border-radius-sm: 8px;
+            --border-radius-lg: 24px;
+        }
+        /* الوضع النهاري */
+        
+        [data-theme="light"] {
+            --bg-primary: #F4F7FC;
+            --bg-secondary: #FFFFFF;
+            --bg-card: rgba(255, 255, 255, 0.9);
+            --text-primary: #1A1F2E;
+            --text-secondary: #5A5F6E;
+            --border-color: rgba(0, 0, 0, 0.1);
+            --shadow-sm: 0 5px 15px rgba(0, 0, 0, 0.1);
+            --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.15);
+            --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.2);
+        }
         
         * {
             margin: 0;
@@ -45,364 +108,267 @@
             box-sizing: border-box;
         }
         
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+        
         body {
-            font-family: 'Inter', sans-serif;
-            background: #0a0c0f;
-            color: #ffffff;
-            direction: ltr;
+            font-family: 'Cairo', sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            transition: background-color 0.3s, color 0.3s;
             overflow-x: hidden;
-            line-height: 1.5;
-            transition: background-color 0.3s ease, color 0.3s ease;
         }
-        /* أنيميشنات متطورة */
+        /* ========== LOADING BAR ========== */
         
-        @keyframes float {
-            0%,
-            100% {
-                transform: translateY(0) rotate(0deg);
-            }
-            25% {
-                transform: translateY(-5px) rotate(1deg);
-            }
-            75% {
-                transform: translateY(5px) rotate(-1deg);
-            }
-        }
-        
-        @keyframes glowPulse {
-            0% {
-                filter: brightness(1) drop-shadow(0 0 5px rgba(42, 245, 152, 0.3));
-            }
-            50% {
-                filter: brightness(1.2) drop-shadow(0 0 20px rgba(42, 245, 152, 0.8));
-            }
-            100% {
-                filter: brightness(1) drop-shadow(0 0 5px rgba(42, 245, 152, 0.3));
-            }
-        }
-        /* ===== شريط التحميل الأنيق ===== */
-        
-        #loading-bar {
+        .loading-bar {
             position: fixed;
             top: 0;
             left: 0;
-            width: 100%;
-            height: 2px;
-            background: rgba(255, 255, 255, 0.05);
-            z-index: 9999;
-        }
-        
-        .progress {
-            height: 100%;
             width: 0%;
-            background: linear-gradient(90deg, #2af598, #08aeea, #2af598);
-            background-size: 200% 100%;
-            animation: loading 2s ease infinite;
-            position: absolute;
-            box-shadow: 0 0 10px #2af598;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            z-index: 9999;
+            transition: width 0.3s;
+            box-shadow: var(--shadow-primary);
         }
+        /* ========== HEADER ========== */
         
-        @keyframes loading {
-            0% {
-                width: 0%;
-                left: 0;
-            }
-            50% {
-                width: 70%;
-                left: 15%;
-            }
-            100% {
-                width: 0%;
-                left: 100%;
-            }
-        }
-        /* ===== الهيدر بتصميم زجاجي أنيق ===== */
-        
-        #navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 2rem;
-            background: rgba(10, 12, 15, 0.8);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            position: sticky;
+        .header {
+            position: fixed;
             top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(11, 14, 23, 0.95);
+            backdrop-filter: blur(10px);
             z-index: 1000;
-            border-bottom: 1px solid rgba(42, 245, 152, 0.15);
-            animation: slideIn 0.5s ease;
+            border-bottom: 1px solid var(--border-color);
+            transition: var(--transition);
         }
         
-        #nav-left a {
-            color: #ffffff;
-            font-size: 1.5rem;
-            font-weight: 700;
+        .header.scrolled {
+            background: rgba(11, 14, 23, 0.98);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .header-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        /* Logo */
+        
+        .logo a {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
             text-decoration: none;
-            background: linear-gradient(135deg, #2af598, #08aeea);
-            background-clip: text;
+        }
+        
+        .logo-text {
+            font-size: 2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            letter-spacing: -0.5px;
-            transition: all 0.3s ease;
+            background-clip: text;
         }
         
-        #nav-left a:hover {
-            transform: scale(1.05);
+        .logo-badge {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 0.2rem 0.8rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        /* Navigation */
+        
+        .nav-menu ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
         }
         
-        #nav-center {
+        .nav-menu a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 0.5rem 1rem;
+            border-radius: var(--border-radius-sm);
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .nav-menu a i {
+            color: var(--primary);
+            font-size: 1rem;
+        }
+        
+        .nav-menu a:hover,
+        .nav-menu a.active {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+        }
+        
+        .nav-menu a:hover i,
+        .nav-menu a.active i {
+            color: white;
+        }
+        /* Header Actions */
+        
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .search-box {
+            display: flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+        
+        .search-input {
+            background: transparent;
+            border: none;
+            padding: 0.6rem 1rem;
+            color: var(--text-primary);
+            font-size: 0.9rem;
+            width: 200px;
+        }
+        
+        .search-input:focus {
+            outline: none;
+        }
+        
+        .search-btn {
+            background: transparent;
+            border: none;
+            padding: 0.6rem 1rem;
+            color: var(--gray);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .search-btn:hover {
+            color: var(--primary);
+        }
+        
+        .theme-toggle,
+        .menu-toggle {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .theme-toggle:hover,
+        .menu-toggle:hover {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .menu-toggle {
+            display: none;
+        }
+        /* ========== SECTIONS ========== */
+        
+        .section {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+        
+        .section-header {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+        }
+        
+        .section-badge {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 0.3rem 1rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        .section-title span {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .section-subtitle {
+            color: var(--text-secondary);
+            font-size: 1rem;
+        }
+        
+        .section-controls {
             display: flex;
             gap: 0.5rem;
         }
         
-        #nav-center a {
-            color: #a0a0a0;
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            border-radius: 8px;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            font-size: 0.95rem;
-            position: relative;
-        }
-        
-        #nav-center a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 0;
-            height: 2px;
-            background: linear-gradient(90deg, #2af598, #08aeea);
-            transition: width 0.3s ease;
-        }
-        
-        #nav-center a:hover::after {
-            width: 80%;
-        }
-        
-        #nav-center a:hover {
-            color: #ffffff;
-            background: rgba(42, 245, 152, 0.1);
-        }
-        
-        .search-header {
-            display: flex;
-            align-items: center;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 10px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.3s ease;
-        }
-        
-        .search-header:focus-within {
-            border-color: #2af598;
-            box-shadow: 0 0 0 3px rgba(42, 245, 152, 0.2);
-            transform: scale(1.02);
-        }
-        
-        .search-header__input {
-            padding: 0.6rem 1rem;
-            border: none;
-            background: transparent;
-            color: white;
-            width: 250px;
-            outline: none;
-            font-size: 0.9rem;
-            font-family: 'Inter', sans-serif;
-        }
-        
-        .search-header__input::placeholder {
-            color: #6b6b6b;
-        }
-        
-        .search-header__button {
-            background: transparent;
-            border: none;
-            padding: 0.6rem 1.2rem;
-            color: #2af598;
-            font-weight: 600;
-            cursor: pointer;
-            border-left: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.3s ease;
-            font-size: 0.9rem;
-        }
-        
-        .search-header__button:hover {
-            color: #ffffff;
-            background: rgba(42, 245, 152, 0.1);
-            transform: scale(1.05);
-        }
-        /* ===== زر تبديل الوضع ===== */
-        
-        .theme-toggle {
-            background: transparent;
-            border: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-            padding: 0.5rem;
-            margin-left: 1rem;
-            transition: transform 0.3s ease;
+        .control-btn {
+            width: 45px;
+            height: 45px;
             border-radius: 50%;
-            width: 40px;
-            height: 40px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            cursor: pointer;
+            transition: var(--transition);
             display: flex;
             align-items: center;
             justify-content: center;
         }
         
-        .theme-toggle:hover {
-            transform: scale(1.1) rotate(15deg);
-            background: rgba(42, 245, 152, 0.1);
-        }
-        /* Light theme variables */
-        
-        body.light-theme {
-            background: #f5f5f5;
-            color: #333;
-        }
-        
-        body.light-theme #navbar {
-            background: rgba(255, 255, 255, 0.9);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-        }
-        
-        body.light-theme .card {
-            background: white;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-        
-        body.light-theme .card-title {
-            background: rgba(0, 0, 0, 0.8);
+        .control-btn:hover {
+            background: var(--primary);
             color: white;
         }
-        /* ===== شريط التصنيفات ===== */
-        
-        .categories-strip {
-            display: flex;
-            gap: 0.8rem;
-            padding: 1rem 2rem;
-            overflow-x: auto;
-            scrollbar-width: none;
-            background: rgba(10, 12, 15, 0.5);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-            animation: slideIn 0.6s ease;
-        }
-        
-        .categories-strip::-webkit-scrollbar {
-            display: none;
-        }
-        
-        .category-btn {
-            padding: 0.5rem 1.2rem;
-            border-radius: 30px;
-            background: transparent;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            color: #a0a0a0;
-            font-size: 0.9rem;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            white-space: nowrap;
-            animation: fadeInUp 0.5s ease;
-            animation-fill-mode: both;
-        }
-        
-        .category-btn:nth-child(1) {
-            animation-delay: 0.1s;
-        }
-        
-        .category-btn:nth-child(2) {
-            animation-delay: 0.15s;
-        }
-        
-        .category-btn:nth-child(3) {
-            animation-delay: 0.2s;
-        }
-        
-        .category-btn:nth-child(4) {
-            animation-delay: 0.25s;
-        }
-        
-        .category-btn:nth-child(5) {
-            animation-delay: 0.3s;
-        }
-        
-        .category-btn:nth-child(6) {
-            animation-delay: 0.35s;
-        }
-        
-        .category-btn:nth-child(7) {
-            animation-delay: 0.4s;
-        }
-        
-        .category-btn:nth-child(8) {
-            animation-delay: 0.45s;
-        }
-        
-        .category-btn:hover {
-            border-color: #2af598;
-            color: #2af598;
-            background: rgba(42, 245, 152, 0.05);
-            transform: translateY(-2px);
-        }
-        
-        .category-btn.active {
-            background: linear-gradient(135deg, #2af598, #08aeea);
-            color: #0a0c0f;
-            border-color: transparent;
-            font-weight: 600;
-        }
-        /* ===== عناوين الأقسام ===== */
-        
-        .section-header {
-            padding: 1.5rem 2rem 0.5rem;
-            animation: fadeInUp 0.5s ease;
-        }
-        
-        .section-header h3 {
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: #ffffff;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            position: relative;
-            background: linear-gradient(135deg, #2af598, #08aeea);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        
-        .section-header h3::after {
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 60%;
-            height: 2px;
-            background: linear-gradient(90deg, #2af598, #08aeea);
-            border-radius: 2px;
-            transition: width 0.3s ease;
-        }
-        
-        .section-header:hover h3::after {
-            width: 100%;
-        }
-        /* ===== البطاقات والأسلايدر ===== */
+        /* ========== CARDS ========== */
         
         .cards-wrapper {
             position: relative;
-            margin: 0 2rem;
         }
         
         .cards-container {
             display: flex;
+            gap: 1.5rem;
             overflow-x: auto;
             scroll-behavior: smooth;
-            gap: 1rem;
-            padding: 0.5rem 0 1.5rem;
+            padding: 1rem 0.5rem;
             scrollbar-width: none;
         }
         
@@ -412,1402 +378,1399 @@
         
         .card {
             flex: 0 0 auto;
-            width: 150px;
-            border-radius: 12px;
+            width: 200px;
+            background: var(--bg-card);
+            backdrop-filter: blur(10px);
+            border-radius: var(--border-radius);
             overflow: hidden;
-            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+            position: relative;
             cursor: pointer;
-            position: relative;
-            background: #14181c;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-            animation: fadeInUp 0.5s ease;
-            animation-fill-mode: both;
-            border: 2px solid transparent;
         }
         
-        .card:nth-child(odd) {
-            animation-delay: 0.1s;
+        .card:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: var(--shadow-lg), 0 0 30px rgba(108, 92, 231, 0.3);
+            border-color: var(--primary);
         }
         
-        .card:nth-child(even) {
-            animation-delay: 0.2s;
-        }
-        
-        .card .poster {
-            width: 100%;
-            height: 200px;
-            overflow: hidden;
-            position: relative;
-        }
-        
-        .card .poster::before {
-            content: '';
+        .card a.card-link {
             position: absolute;
             top: 0;
-            left: -100%;
+            left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), rgba(42, 245, 152, 0.2), transparent);
-            transition: left 0.7s ease;
-            z-index: 2;
-            transform: skewX(-20deg);
+            z-index: 5;
+            opacity: 0;
         }
         
-        .card .poster img {
+        .poster {
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 2/3;
+        }
+        
+        .poster img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: all 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            filter: brightness(0.9) saturate(0.9);
-        }
-        /* تأثير زوم متوسط - ثابت بلون أزرق واحد */
-        
-        .card:hover {
-            transform: scale(1.18) translateY(-12px) rotate(1deg);
-            box-shadow: 0 25px 35px rgba(0, 0, 0, 0.8), 0 0 0 3px #2af598, 0 0 25px #2af598;
-            z-index: 100;
-            border-color: #2af598;
-        }
-        
-        .card:hover .poster::before {
-            left: 100%;
+            transition: var(--transition);
         }
         
         .card:hover .poster img {
-            transform: scale(1.25) rotate(2deg);
-            filter: brightness(1.2) saturate(1.3) contrast(1.1);
+            transform: scale(1.1);
         }
         
-        .card:hover .card-title {
-            color: #ffffff;
-            background: rgba(0, 0, 0, 0.9);
-            text-shadow: 0 0 15px #2af598;
-            transform: translateY(-5px);
-            border-top-color: #2af598;
-        }
-        
-        .card::after {
+        .poster::after {
             content: '';
             position: absolute;
-            top: -12px;
-            left: -12px;
-            right: -12px;
-            bottom: -12px;
-            background: radial-gradient(circle at 30% 30%, rgba(42, 245, 152, 0.2), transparent 70%);
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
             opacity: 0;
-            transition: opacity 0.5s ease;
-            pointer-events: none;
-            z-index: -1;
-            filter: blur(12px);
+            transition: var(--transition);
         }
         
-        .card:hover::after {
-            opacity: 0.7;
+        .card:hover .poster::after {
+            opacity: 1;
         }
         
-        .card-title {
-            padding: 0.75rem 0.5rem;
-            font-size: 0.85rem;
-            font-weight: 500;
-            text-align: center;
-            background: rgba(0, 0, 0, 0.8);
-            color: #ffffff;
+        .data-list {
+            padding: 1rem;
+        }
+        
+        .data-list h1 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            transition: all 0.4s ease;
-            position: relative;
-            z-index: 2;
-            backdrop-filter: blur(2px);
         }
-        /* تحسينات البطاقات */
         
-        .quick-actions {
+        .data-list p {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            line-clamp: 2;
+            overflow: hidden;
+        }
+        /* Stars Rating */
+        
+        .div-star {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        
+        .div-star input[type="radio"] {
+            display: none;
+        }
+        
+        .div-star .stars {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: center;
+        }
+        
+        .div-star label {
+            color: var(--gray);
+            font-size: 1.2rem;
+            cursor: pointer;
+            padding: 0 0.2rem;
+        }
+        
+        .div-star input:checked~label,
+        .div-star label:hover,
+        .div-star label:hover~label {
+            color: #FFD700;
+        }
+        
+        .div-star p {
+            margin: 0.5rem 0;
+            font-size: 0.8rem;
+            text-align: center;
+        }
+        /* Watch Button */
+        
+        .button-star {
+            display: block;
+            text-align: center;
+            padding: 0.5rem;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            text-decoration: none;
+            border-radius: var(--border-radius-sm);
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-top: 0.5rem;
+            transition: var(--transition);
+            position: relative;
+            z-index: 10;
+        }
+        
+        .button-star:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-primary);
+        }
+        /* Offers Grid - 6 كروت في الصف */
+        
+        .offers-section {
+            background: linear-gradient(135deg, rgba(108, 92, 231, 0.05), rgba(0, 210, 255, 0.05));
+            border-radius: var(--border-radius-lg);
+            padding: 3rem 2rem;
+            margin: 2rem auto;
+        }
+        
+        .offers-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .offers-grid .card {
+            width: 100%;
+        }
+        
+        .load-more-wrapper {
+            text-align: center;
+            margin-top: 2rem;
+        }
+        
+        .btn-load-more {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--text-primary);
+            padding: 0.8rem 2rem;
+            font-size: 1rem;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            border-radius: 50px;
+            transition: var(--transition);
+        }
+        
+        .btn-load-more:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-primary);
+        }
+        /* ========== CARD HOVER EFFECTS ========== */
+        
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(108, 92, 231, 0.3), rgba(0, 210, 255, 0.3));
+            border-radius: var(--border-radius);
+            opacity: 0;
+            transition: var(--transition);
+            z-index: 1;
+            pointer-events: none;
+        }
+        
+        .card:hover::before {
+            opacity: 1;
+        }
+        
+        .card .poster {
+            position: relative;
+        }
+        
+        .card .poster .play-overlay {
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%) scale(0.5);
+            transform: translate(-50%, -50%) scale(0);
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 50%;
             display: flex;
-            gap: 0.5rem;
-            opacity: 0;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            z-index: 20;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 1.5rem;
+            z-index: 3;
+            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
         }
         
-        .card:hover .quick-actions {
-            opacity: 1;
+        .card:hover .poster .play-overlay {
             transform: translate(-50%, -50%) scale(1);
         }
         
-        .quick-btn {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: rgba(0, 0, 0, 0.8);
-            border: 2px solid #2af598;
-            color: #2af598;
-            font-size: 1.2rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(4px);
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .card .poster .rating-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+            padding: 0.3rem 0.6rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            color: #FFD700;
+            z-index: 3;
+            transform: translateX(20px);
+            opacity: 0;
+            transition: var(--transition);
+        }
+        
+        .card:hover .poster .rating-badge {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        
+        .card .poster .year-badge {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+            padding: 0.2rem 0.6rem;
+            border-radius: 50px;
+            font-size: 0.7rem;
+            color: white;
+            z-index: 3;
+            transform: translateY(20px);
+            opacity: 0;
+            transition: var(--transition);
+        }
+        
+        .card:hover .poster .year-badge {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        
+        .card .data-list {
+            position: relative;
+            z-index: 2;
+            background: linear-gradient(to top, var(--bg-card), rgba(26, 31, 46, 0.9));
+        }
+        
+        .card .data-list h1 {
+            transition: var(--transition);
+        }
+        
+        .card:hover .data-list h1 {
+            color: var(--primary);
+        }
+        
+        .card .data-list .button-star {
             position: relative;
             overflow: hidden;
-        }
-        
-        .quick-btn::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 0;
-            border-radius: 50%;
-            background: rgba(42, 245, 152, 0.5);
-            transform: translate(-50%, -50%);
-            transition: width 0.6s, height 0.6s;
-            z-index: -1;
-        }
-        
-        .quick-btn:hover::before {
-            width: 80px;
-            height: 80px;
-        }
-        
-        .quick-btn:hover {
-            background: #2af598;
-            color: #0a0c0f;
-            transform: scale(1.2) rotate(360deg);
-            box-shadow: 0 0 20px #2af598;
-            border-color: white;
-        }
-        /* ===== أزرار التمرير الأنيقة ===== */
-        
-        .scroll-arrow {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: rgba(20, 24, 28, 0.9);
-            backdrop-filter: blur(8px);
-            border: 1px solid rgba(42, 245, 152, 0.3);
-            color: #2af598;
-            font-size: 1.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
             z-index: 10;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
         }
         
-        .scroll-arrow.left {
-            left: -20px;
-        }
-        
-        .scroll-arrow.right {
-            right: -20px;
-        }
-        
-        .scroll-arrow:hover {
-            background: #2af598;
-            color: #0a0c0f;
-            border-color: #2af598;
-            transform: translateY(-50%) scale(1.1);
-            box-shadow: 0 0 20px rgba(42, 245, 152, 0.4);
-        }
-        /* ===== قسم العروض ===== */
-        
-        #offers-section {
-            padding: 1.5rem 2rem 3rem;
-        }
-        
-        #offers-section h2 {
-            font-size: 2rem;
-            font-weight: 700;
-            background: linear-gradient(135deg, #2af598, #08aeea);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 1.5rem;
-            text-align: center;
-            animation: pulse 2s infinite;
-        }
-        
-        .offers-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-            gap: 1.2rem;
-            margin: 0 auto;
-            max-width: 1400px;
-        }
-        
-        .offer-card {
-            width: 100%;
-            aspect-ratio: 2/3;
-            border-radius: 12px;
-            overflow: hidden;
-            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            cursor: pointer;
-            background: #14181c;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-            border: 2px solid transparent;
-            animation: fadeInUp 0.5s ease;
-            animation-fill-mode: both;
-            position: relative;
-        }
-        
-        .offer-card:nth-child(3n+1) {
-            animation-delay: 0.1s;
-        }
-        
-        .offer-card:nth-child(3n+2) {
-            animation-delay: 0.2s;
-        }
-        
-        .offer-card:nth-child(3n+3) {
-            animation-delay: 0.3s;
-        }
-        
-        .offer-card::before {
+        .card .data-list .button-star::before {
             content: '';
             position: absolute;
             top: 0;
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), rgba(42, 245, 152, 0.2), transparent);
-            transition: left 0.7s ease;
-            z-index: 2;
-            transform: skewX(-20deg);
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+            z-index: -1;
         }
         
-        .offer-card img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: all 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            filter: brightness(0.9) saturate(0.9);
-        }
-        /* نفس التأثير الرائع لبطاقات العروض */
-        
-        .offer-card:hover {
-            transform: scale(1.18) translateY(-12px) rotate(-1deg);
-            box-shadow: 0 25px 35px rgba(0, 0, 0, 0.8), 0 0 0 3px #2af598, 0 0 25px #2af598;
-            z-index: 100;
-            border-color: #2af598;
-        }
-        
-        .offer-card:hover::before {
+        .card .data-list .button-star:hover::before {
             left: 100%;
         }
+        /* ========== NEWSLETTER SECTION - واتساب وتليجرام ========== */
         
-        .offer-card:hover img {
-            transform: scale(1.25) rotate(-2deg);
-            filter: brightness(1.2) saturate(1.3) contrast(1.1);
+        .newsletter {
+            max-width: 1400px;
+            margin: 4rem auto;
+            padding: 0 2rem;
         }
         
-        .offer-card::after {
+        .newsletter-content {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: var(--border-radius-lg);
+            padding: 4rem;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .newsletter-content::before {
             content: '';
             position: absolute;
-            top: -12px;
-            left: -12px;
-            right: -12px;
-            bottom: -12px;
-            background: radial-gradient(circle at 70% 30%, rgba(42, 245, 152, 0.2), transparent 70%);
-            opacity: 0;
-            transition: opacity 0.5s ease;
-            pointer-events: none;
-            z-index: -1;
-            filter: blur(12px);
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
         }
         
-        .offer-card:hover::after {
-            opacity: 0.7;
-        }
-        /* ===== أزرار الترقيم ===== */
-        
-        .load-pagination {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 0.8rem;
-            margin: 2rem 0 1rem;
-            flex-wrap: wrap;
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
         }
         
-        .load-page-button {
-            background: transparent;
-            color: #a0a0a0;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 0.6rem 1.2rem;
-            border-radius: 8px;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-size: 0.9rem;
-            min-width: 45px;
-            font-family: 'Inter', sans-serif;
+        .newsletter-content h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
         }
         
-        .load-page-button:hover {
-            border-color: #2af598;
-            color: #2af598;
-            background: rgba(42, 245, 152, 0.05);
-            transform: translateY(-2px);
-        }
-        
-        .load-page-button.active {
-            background: #2af598;
-            color: #0a0c0f;
-            border-color: #2af598;
-            font-weight: 600;
-            transform: scale(1.1);
-            box-shadow: 0 5px 15px rgba(42, 245, 152, 0.4);
-        }
-        
-        .nav-arrow {
-            background: transparent;
-            color: #2af598;
-            border: 1px solid rgba(42, 245, 152, 0.3);
-            padding: 0.6rem 1.2rem;
-            border-radius: 8px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
+        .newsletter-content p {
             font-size: 1.1rem;
-            min-width: 45px;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .social-subscribe {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .social-subscribe a {
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
             display: inline-flex;
             align-items: center;
+            gap: 0.8rem;
+            transition: var(--transition);
+            border: 2px solid transparent;
+            color: white;
+        }
+        
+        .social-subscribe a i {
+            font-size: 1.3rem;
+        }
+        
+        .social-subscribe .whatsapp-btn {
+            background: var(--whatsapp);
+            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
+        }
+        
+        .social-subscribe .whatsapp-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(37, 211, 102, 0.4);
+        }
+        
+        .social-subscribe .telegram-btn {
+            background: var(--telegram);
+            box-shadow: 0 10px 20px rgba(0, 136, 204, 0.3);
+        }
+        
+        .social-subscribe .telegram-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 136, 204, 0.4);
+        }
+        
+        .phone-number {
+            margin-top: 1.5rem;
+            font-size: 1.2rem;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
             justify-content: center;
+            gap: 0.5rem;
         }
         
-        .nav-arrow:hover {
-            background: #2af598;
-            color: #0a0c0f;
-            border-color: #2af598;
-            transform: scale(1.1);
-            box-shadow: 0 5px 15px rgba(42, 245, 152, 0.4);
+        .phone-number i {
+            font-size: 1.3rem;
         }
-        /* ===== إشعارات Toast ===== */
+        /* ========== FOOTER ========== */
         
-        #toast-container {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 9999;
+        .footer {
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border-color);
+            padding: 4rem 2rem 1rem;
+        }
+        
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        .footer-section {
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 1.5rem;
         }
         
-        .toast {
-            background: rgba(0, 0, 0, 0.9);
-            backdrop-filter: blur(10px);
-            color: white;
-            padding: 1rem 1.5rem;
-            border-radius: 10px;
-            border-left: 4px solid #2af598;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-            transform: translateX(100%);
-            animation: toastSlide 0.3s ease forwards;
-            max-width: 300px;
-            font-size: 0.95rem;
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
         
-        .toast.success {
-            border-left-color: #2af598;
+        .footer-section p {
+            color: var(--text-secondary);
+            line-height: 1.8;
         }
         
-        .toast.error {
-            border-left-color: #ff4d4d;
+        .social-links {
+            display: flex;
+            gap: 1rem;
         }
         
-        .toast.info {
-            border-left-color: #08aeea;
-        }
-        
-        @keyframes toastSlide {
-            to {
-                transform: translateX(0);
-            }
-        }
-        
-        .toast.fade-out {
-            animation: toastFade 0.3s ease forwards;
-        }
-        
-        @keyframes toastFade {
-            to {
-                opacity: 0;
-                transform: translateX(100%);
-            }
-        }
-        /* ===== زر العودة للأعلى ===== */
-        
-        #back-to-top {
-            position: fixed;
-            bottom: 30px;
-            left: 30px;
-            width: 50px;
-            height: 50px;
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.05);
             border-radius: 50%;
-            background: #2af598;
-            color: #0a0c0f;
-            border: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 20px rgba(42, 245, 152, 0.4);
-            z-index: 999;
             display: flex;
             align-items: center;
             justify-content: center;
+            color: var(--text-primary);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
         }
         
-        #back-to-top.visible {
-            opacity: 1;
-            visibility: visible;
-        }
-        
-        #back-to-top:hover {
-            transform: scale(1.1) translateY(-5px);
-            box-shadow: 0 8px 25px rgba(42, 245, 152, 0.6);
-        }
-        /* ===== نافذة المشغل السريع ===== */
-        
-        .quick-player {
-            position: fixed;
+        .social-links a::before {
+            content: '';
+            position: absolute;
             top: 0;
             left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.95);
-            z-index: 10001;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease;
+            right: 0;
+            bottom: 0;
+            background: var(--primary);
+            border-radius: 50%;
+            transform: scale(0);
+            transition: var(--transition);
+            z-index: -1;
         }
         
-        .quick-player.active {
-            opacity: 1;
-            visibility: visible;
-        }
-        
-        .player-content {
-            width: 90%;
-            max-width: 900px;
-            position: relative;
-            transform: scale(0.9);
-            transition: transform 0.3s ease;
-        }
-        
-        .quick-player.active .player-content {
+        .social-links a:hover::before {
             transform: scale(1);
         }
         
-        .close-player {
-            position: absolute;
-            top: -40px;
-            right: 0;
-            background: transparent;
-            border: none;
+        .social-links a:hover {
             color: white;
-            font-size: 2rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            width: 40px;
-            height: 40px;
+            transform: translateY(-3px);
+        }
+        
+        .footer-section h4 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-section ul li a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: var(--transition);
+            display: inline-block;
+        }
+        
+        .footer-section ul li a:hover {
+            color: var(--primary);
+            transform: translateX(-5px);
+        }
+        
+        .contact-info li {
             display: flex;
             align-items: center;
-            justify-content: center;
-            border-radius: 50%;
+            gap: 0.8rem;
+            color: var(--text-secondary);
+            transition: var(--transition);
         }
         
-        .close-player:hover {
-            transform: scale(1.2) rotate(90deg);
-            color: #2af598;
-            background: rgba(255, 255, 255, 0.1);
+        .contact-info li:hover {
+            color: var(--primary);
+            transform: translateX(-5px);
         }
         
-        .player-container {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            border-radius: 12px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+        .contact-info i {
+            color: var(--primary);
+            width: 20px;
         }
         
-        .player-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-        /* ===== الفوتر ===== */
-        
-        .footer {
+        .footer-bottom {
             text-align: center;
-            padding: 2rem;
-            background: rgba(10, 12, 15, 0.8);
-            border-top: 1px solid rgba(42, 245, 152, 0.1);
-            color: #6b6b6b;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-secondary);
             font-size: 0.9rem;
-            animation: fadeInUp 0.5s ease;
         }
-        /* ===== التجاوب مع الشاشات الصغيرة ===== */
+        /* ========== RESPONSIVE ========== */
+        
+        @media (max-width: 1200px) {
+            .offers-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        
+        @media (max-width: 1024px) {
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+                gap: 2rem;
+            }
+            .offers-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
         
         @media (max-width: 768px) {
-            #navbar {
-                flex-direction: column;
-                gap: 1rem;
-                padding: 1rem;
+            .nav-menu {
+                display: none;
             }
-            #nav-center {
-                width: 100%;
-                justify-content: center;
-                flex-wrap: wrap;
+            .menu-toggle {
+                display: flex;
             }
-            .search-header {
-                width: 100%;
-            }
-            .search-header__input {
-                width: 100%;
-            }
-            .categories-strip {
-                padding: 1rem;
-            }
-            .cards-wrapper {
-                margin: 0 1rem;
-            }
-            .scroll-arrow.left {
-                left: -10px;
-            }
-            .scroll-arrow.right {
-                right: -10px;
-            }
-            .offers-container {
-                grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
-                gap: 0.8rem;
+            .search-box {
+                display: none;
             }
             .section-header {
-                padding: 1rem 1rem 0.5rem;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
             }
-            #offers-section {
-                padding: 1rem 1rem 2rem;
+            .section-title {
+                font-size: 2rem;
             }
-            #offers-section h2 {
-                font-size: 1.5rem;
+            .offers-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
-            #back-to-top {
-                bottom: 20px;
-                left: 20px;
-                width: 40px;
-                height: 40px;
-                font-size: 1.2rem;
+            .social-subscribe {
+                flex-direction: column;
+                align-items: center;
             }
-            .card:hover,
-            .offer-card:hover {
-                transform: scale(1.15) translateY(-10px);
+            .social-subscribe a {
+                width: 100%;
+                justify-content: center;
+            }
+            .newsletter-content {
+                padding: 3rem 1.5rem;
             }
         }
         
         @media (max-width: 480px) {
-            .card {
-                width: 130px;
+            .hero-buttons {
+                flex-direction: column;
             }
-            .card .poster {
-                height: 180px;
+            .hero-stats {
+                flex-direction: column;
+                gap: 1rem;
             }
-            .offers-container {
-                grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+            .section {
+                padding: 2rem 1rem;
             }
-            .category-btn {
-                padding: 0.4rem 1rem;
-                font-size: 0.85rem;
+            .offers-grid {
+                grid-template-columns: 1fr;
             }
-            .card:hover,
-            .offer-card:hover {
-                transform: scale(1.12) translateY(-8px);
+            .footer-content {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 
 <body>
-    <!-- شريط التحميل -->
-    <div id="loading-bar">
-        <div class="progress"></div>
-    </div>
+    <!-- شريط التحميل المتحرك -->
+    <div class="loading-bar" id="loadingBar"></div>
 
-    <!-- الهيدر -->
-    <nav id="navbar">
-        <div id="nav-left"><a href="#">HaM كرتون</a></div>
-        <div id="nav-center">
-            <a href="#offers-section">شاهد الان</a>
-            <a href="#new-movies">أفلام جديدة</a>
-            <a href="#main-poster">أفلام</a>
-            <a href="#">الرئيسية</a>
-
-        </div>
-        <div style="display: flex; align-items: center;">
-            <div class="search-header">
-                <input placeholder="ابحث عن فيلم..." class="search-header__input" type="text" id="searchInput" />
-                <button class="search-header__button" id="searchButton">بحث</button>
+    <!-- الهيدر الجديد -->
+    <header class="header" id="header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="#">
+                    <span class="logo-text">كرتون HaM</span>
+                    <span class="logo-badge">Cartoon</span>
+                </a>
             </div>
-            <button id="theme-toggle" class="theme-toggle">🌙</button>
+
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#" class="active"><i class="fas fa-home"></i> الرئيسية</a></li>
+                    <li><a href="#movies"><i class="fas fa-film"></i> الأفلام</a></li>
+                    <li><a href="#series"><i class="fas fa-tv"></i> المسلسلات</a></li>
+                    <li><a href="#offers"><i class="fas fa-star"></i> العروض</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="ابحث عن كرتون..." class="search-input">
+                    <button id="searchBtn" class="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
         </div>
-    </nav>
+    </header>
 
-    <!-- شريط التصنيفات -->
-    <div class="categories-strip">
-        <button class="category-btn active">الكل</button>
-        <button class="category-btn">أكشن</button>
-        <button class="category-btn">كوميدي</button>
-        <button class="category-btn">مغامرات</button>
-        <button class="category-btn">خيال علمي</button>
-        <button class="category-btn">دراما</button>
-        <button class="category-btn">رعب</button>
-        <button class="category-btn">عائلي</button>
-    </div>
-
-    <!-- أفلام جديدة -->
-    <section id="new-movies">
+    <!-- قسم الأفلام (مرفوع مكان الهيرو) -->
+    <section id="movies" class="section" style="padding-top: 120px;">
         <div class="section-header">
-            <h3>⭐ أفلام جديدة</h3>
+            <div class="section-title-wrapper">
+                <span class="section-badge">أفلام حصرية</span>
+                <h2 class="section-title">أحدث <span>الأفلام</span></h2>
+                <p class="section-subtitle">تشكيلة مميزة من أحدث أفلام الكرتون والأنمي</p>
+            </div>
+            <div class="section-controls">
+                <button class="control-btn movies-left"><i class="fas fa-chevron-left"></i></button>
+                <button class="control-btn movies-right"><i class="fas fa-chevron-right"></i></button>
+            </div>
         </div>
-        <div class="cards-wrapper">
-            <button class="scroll-arrow left new-movies-left">‹</button>
-            <button class="scroll-arrow right new-movies-right">›</button>
-            <div id="cards-new-movies" class="cards-container"></div>
-        </div>
-    </section>
 
-    <!-- أفلام -->
-    <section id="main-poster">
-        <div class="section-header">
-            <h3>🎬 أفلام مميزة</h3>
-        </div>
         <div class="cards-wrapper">
-            <button class="scroll-arrow left movies-left">‹</button>
-            <button class="scroll-arrow right movies-right">›</button>
             <div id="cards-movies" class="cards-container"></div>
         </div>
     </section>
 
-    <!-- شاهد الان - مع أزرار الترقيم -->
-    <section id="offers-section">
-        <h2>شاهد الان 🔥</h2>
-        <div id="cards-offers" class="offers-container"></div>
+    <!-- قسم المسلسلات -->
+    <section id="series" class="section">
+        <div class="section-header">
+            <div class="section-title-wrapper">
+                <span class="section-badge">مسلسلات حصرية</span>
+                <h2 class="section-title">أفضل <span>المسلسلات</span></h2>
+                <p class="section-subtitle">أشهر مسلسلات الكرتون والأنمي بتقنية عالية</p>
+            </div>
+            <div class="section-controls">
+                <button class="control-btn series-left"><i class="fas fa-chevron-left"></i></button>
+                <button class="control-btn series-right"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
 
-        <div class="load-pagination" id="pagination-container">
-            <button id="nav-prev" class="nav-arrow">‹</button>
-            <button id="page-1" class="load-page-button active" data-page="1">1</button>
-            <button id="page-2" class="load-page-button" data-page="2">2</button>
-            <button id="page-3" class="load-page-button" data-page="3">3</button>
-            <button id="page-4" class="load-page-button" data-page="4">4</button>
-            <button id="page-5" class="load-page-button" data-page="5">5</button>
-            <button id="nav-next" class="nav-arrow">›</button>
+        <div class="cards-wrapper">
+            <div id="cards-series" class="cards-container"></div>
         </div>
     </section>
 
-    <!-- نافذة المشغل السريع -->
-    <div id="quick-player" class="quick-player">
-        <div class="player-content">
-            <button class="close-player">×</button>
-            <div class="player-container">
-                <iframe id="player-iframe" src="" frameborder="0" allowfullscreen></iframe>
+    <!-- قسم العروض المميزة - 6 كروت في الصف -->
+    <section id="offers" class="section offers-section">
+        <div class="section-header">
+            <div class="section-title-wrapper">
+                <span class="section-badge">عروض مميزة</span>
+                <h2 class="section-title">شاهد <span>الآن</span></h2>
+                <p class="section-subtitle">عروض حصرية لفترة محدودة</p>
             </div>
         </div>
-    </div>
 
-    <!-- زر العودة للأعلى -->
-    <button id="back-to-top" title="العودة للأعلى">↑</button>
+        <div id="cards-offers" class="offers-grid"></div>
 
-    <!-- حاوية الإشعارات -->
-    <div id="toast-container"></div>
+        <div class="load-more-wrapper">
+            <button id="load-more-offers" class="btn btn-load-more">
+                <i class="fas fa-plus-circle"></i> المزيد من العروض
+            </button>
+        </div>
+    </section>
 
-    <!-- الفوتر -->
+    <!-- قسم النشرة البريدية - واتساب وتليجرام -->
+    <section class="newsletter">
+        <div class="newsletter-content">
+            <h3>اشترك في القناة</h3>
+            <p>احصل على أحدث العروض والأفلام الحصرية أولاً بأول</p>
+
+            <div class="social-subscribe">
+                <a href="https://wa.me/201142009562" target="_blank" class="whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i> واتساب
+                </a>
+                <a href="https://t.me/201142009562" target="_blank" class="telegram-btn">
+                    <i class="fab fa-telegram-plane"></i> تليجرام
+                </a>
+            </div>
+
+            <div class="phone-number">
+                <i class="fas fa-phone-alt"></i>
+                <span>+20 11 42009562</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- الفوتر - مع واتساب وتليجرام -->
     <footer class="footer">
-        <p>جميع الحقوق محفوظة &copy; 2025 HaM سينما</p>
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <span class="logo-text">كرتون هايبر</span>
+                    <span class="logo-badge">Cartoon</span>
+                </div>
+                <p>منصتك الأولى لمشاهدة أفلام ومسلسلات الكرتون والأنمي بجودة عالية وتجربة فريدة</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/201142009562" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://t.me/201142009562" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4>روابط سريعة</h4>
+                <ul>
+                    <li><a href="#">الرئيسية</a></li>
+                    <li><a href="#movies">الأفلام</a></li>
+                    <li><a href="#series">المسلسلات</a></li>
+                    <li><a href="#offers">العروض</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>فئات</h4>
+                <ul>
+                    <li><a href="#">أكشن</a></li>
+                    <li><a href="#">مغامرات</a></li>
+                    <li><a href="#">كوميديا</a></li>
+                    <li><a href="#">عائلي</a></li>
+                    <li><a href="#">خيال علمي</a></li>
+                    <li><a href="#">دراما</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>تواصل معنا</h4>
+                <ul class="contact-info">
+                    <li><i class="fas fa-envelope"></i> info@cartoonhyper.com</li>
+                    <li><a href="https://wa.me/201142009562" target="_blank" style="color: var(--text-secondary); text-decoration: none; display: flex; align-items: center; gap: 0.8rem;"><i class="fab fa-whatsapp" style="color: var(--whatsapp);"></i> +20 11 42009562</a></li>
+                    <li><a href="https://t.me/201142009562" target="_blank" style="color: var(--text-secondary); text-decoration: none; display: flex; align-items: center; gap: 0.8rem;"><i class="fab fa-telegram-plane" style="color: var(--telegram);"></i> +20 11 42009562</a></li>
+                    <li><i class="fas fa-map-marker-alt"></i> القاهرة، مصر</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>جميع الحقوق محفوظة &copy; 2025 كرتون هايبر | تصميم وتطوير HaM Cinema Team</p>
+        </div>
     </footer>
 
     <script>
-        window.currentEpisode = 1;
+        // ========== DATA ==========
+        // ترتيب الأفلام من الأفضل إلى الأقل (حسب التقييم والشهرة)
+        const movies = [
+            // الأفلام الأيقونية والتقييمات العالية (الدرجة الأولى)
+            {
+                title: "الأسد الملك",
+                description: "فيلم كرتون كلاسيكي - أعظم أفلام ديزني على الإطلاق",
+                image: "img/dany5/dany025.jpg",
+                link: "show6/show016.html",
+                year: "1994",
+                rating: "9.5",
+                category: "عائلي",
+                popularity: 10
+            }, {
+                title: "فوق Up",
+                description: "فيلم مغامرات رائع - من أفضل أفلام بيكسار",
+                image: "img/dany5/dany023.jpg",
+                link: "show6/show013.html",
+                year: "2009",
+                rating: "9.2",
+                category: "مغامرات",
+                popularity: 9.9
+            }, {
+                title: "كوكو",
+                description: "فيلم عائلي مؤثر - حائز على جائزة الأوسكار",
+                image: "img/dany5/dany026.jpg",
+                link: "show6/show017.html",
+                year: "2017",
+                rating: "9.3",
+                category: "عائلي",
+                popularity: 9.8
+            }, {
+                title: "قلبا وقالبا",
+                description: "فيلم دراما رائع - من إبداعات بيكسار",
+                image: "img/dany5/dany022.jpg",
+                link: "show6/show015.html",
+                year: "2015",
+                rating: "8.9",
+                category: "دراما",
+                popularity: 9.7
+            }, {
+                title: "كرتون روح",
+                description: "فيلم دراما رائع - موسيقى جاز رائعة",
+                image: "img/dany5/dany027.jpg",
+                link: "show6/show018.html",
+                year: "2020",
+                rating: "8.6",
+                category: "دراما",
+                popularity: 9.6
+            },
 
-        // بيانات الأفلام
-        const movies = [{
-            title: "كونغ فو باندا",
-            image: "img/dany5/dany04.jpg",
-            link: "show6/show1.html",
-            category: "أكشن"
-        }, {
-            title: "حكاية لعبه",
-            image: "img/dany5/dany016.jpg",
-            link: "show6/show2.html",
-            category: "كوميدي"
-        }, {
-            title: "النمله والجراد",
-            image: "img/dany5/dany013.jpg",
-            link: "show6/show3.html",
-            category: "عائلي"
-        }, {
-            title: "عائلة روبنسون",
-            image: "img/dany5/dany017.jpg",
-            link: "show6/show4.html",
-            category: "مغامرات"
-        }, {
-            title: "مزرعه فى خطر",
-            image: "img/dany5/dany018.jpg",
-            link: "show6/show5.html",
-            category: "كوميدي"
-        }, {
-            title: "ليله فى المتحف",
-            image: "img/dany5/dany019.jpg",
-            link: "show6/show6.html",
-            category: "مغامرات"
-        }, {
-            title: "مريدا",
-            image: "img/dany5/dany011.jpg",
-            link: "show6/show7.html",
-            category: "مغامرات"
-        }, {
-            title: "بيت التنانين",
-            image: "img/dany5/dany01.jpg",
-            link: "show6/show8.html",
-            category: "خيال علمي"
-        }, {
-            title: "عصر الجليد",
-            image: "img/dany5/dany08.jpg",
-            link: "show6/show9.html",
-            category: "كوميدي"
-        }, {
-            title: "ملكة الثلج",
-            image: "img/dany5/dany02.jpg",
-            link: "show6/show10.html",
-            category: "عائلي"
-        }, {
-            title: "الامبراطور 2000",
-            image: "img/dany5/dany021.jpg",
-            link: "show6/show011.html",
-            category: "كوميدي"
-        }, {
-            title: "الامبراطور2004",
-            image: "img/dany5/dany020.jpg",
-            link: "show6/show012.html",
-            category: "كوميدي"
-        }, {
-            title: "فوق up",
-            image: "img/dany5/dany023.jpg",
-            link: "show6/show013.html",
-            category: "مغامرات"
-        }, {
-            title: "فلم بن تن",
-            image: "img/dany5/dany024.jpg",
-            link: "show6/show014.html",
-            category: "أكشن"
-        }, {
-            title: "قلبا وقالبا",
-            image: "img/dany5/dany022.jpg",
-            link: "show6/show015.html",
-            category: "دراما"
-        }, {
-            title: "الاسد الملك",
-            image: "img/dany5/dany025.jpg",
-            link: "show6/show016.html",
-            category: "عائلي"
-        }, {
-            title: "كوكو",
-            image: "img/dany5/dany026.jpg",
-            link: "show6/show017.html",
-            category: "عائلي"
-        }, {
-            title: "كرتون روح",
-            image: "img/dany5/dany027.jpg",
-            link: "show6/show018.html",
-            category: "دراما"
-        }];
+            // أفلام شهرة عالية (الدرجة الثانية)
+            {
+                title: "كونغ فو باندا",
+                description: "فيلم أكشن ومغامرات - بو والمحاربين الأسطوريين",
+                image: "img/dany5/dany04.jpg",
+                link: "show6/show1.html",
+                year: "2008",
+                rating: "8.5",
+                category: "أكشن",
+                popularity: 9.5
+            }, {
+                title: "حكاية لعبه",
+                description: "فيلم كوميدي ومغامرات - وودي وباز يير",
+                image: "img/dany5/dany016.jpg",
+                link: "show6/show2.html",
+                year: "1995",
+                rating: "8.9",
+                category: "كوميدي",
+                popularity: 9.4
+            }, {
+                title: "عصر الجليد",
+                description: "فيلم كوميدي - مانفريد وسيد ودييغو",
+                image: "img/dany5/dany08.jpg",
+                link: "show6/show9.html",
+                year: "2002",
+                rating: "8.7",
+                category: "كوميدي",
+                popularity: 9.3
+            }, {
+                title: "ملكة الثلج",
+                description: "فيلم عائلي - مغامرة إلسا وآنا",
+                image: "img/dany5/dany02.jpg",
+                link: "show6/show10.html",
+                year: "2013",
+                rating: "8.4",
+                category: "عائلي",
+                popularity: 9.2
+            }, {
+                title: "مريدا",
+                description: "فيلم مغامرات - أميرة أسكتلندا الشجاعة",
+                image: "img/dany5/dany011.jpg",
+                link: "show6/show7.html",
+                year: "2012",
+                rating: "8.3",
+                category: "مغامرات",
+                popularity: 9.1
+            }, {
+                title: "بيت التنانين",
+                description: "فيلم خيال علمي - عجائب التنانين",
+                image: "img/dany5/dany01.jpg",
+                link: "show6/show8.html",
+                year: "2010",
+                rating: "9.0",
+                category: "خيال علمي",
+                popularity: 9.0
+            },
 
-        const newMovies = [...movies];
+            // أفلام ممتازة (الدرجة الثالثة)
+            {
+                title: "عائلة روبنسون",
+                description: "فيلم مغامرات - عائلة مخترعين",
+                image: "img/dany5/dany017.jpg",
+                link: "show6/show4.html",
+                year: "2007",
+                rating: "8.2",
+                category: "مغامرات",
+                popularity: 8.8
+            }, {
+                title: "ليله فى المتحف",
+                description: "فيلم مغامرات - متحف التاريخ الطبيعي",
+                image: "img/dany5/dany019.jpg",
+                link: "show6/show6.html",
+                year: "2006",
+                rating: "8.0",
+                category: "مغامرات",
+                popularity: 8.7
+            },
 
-        // قاعدة بيانات العروض
-        let offersDatabase = [{
-            title: "كونغ فو باندا",
-            image: "img/dany5/dany04.jpg",
-            link: "show6/show1.html",
-            category: "أكشن"
-        }, {
-            title: "حكاية لعبه",
-            image: "img/dany5/dany016.jpg",
-            link: "show6/show2.html",
-            category: "كوميدي"
-        }, {
-            title: "النمله والجراد",
-            image: "img/dany5/dany013.jpg",
-            link: "show6/show3.html",
-            category: "عائلي"
-        }, {
-            title: "عائلة روبنسون",
-            image: "img/dany5/dany017.jpg",
-            link: "show6/show4.html",
-            category: "مغامرات"
-        }, {
-            title: "مزرعه فى خطر",
-            image: "img/dany5/dany018.jpg",
-            link: "show6/show5.html",
-            category: "كوميدي"
-        }, {
-            title: "ليله فى المتحف",
-            image: "img/dany5/dany019.jpg",
-            link: "show6/show6.html",
-            category: "مغامرات"
-        }, {
-            title: "مريدا",
-            image: "img/dany5/dany011.jpg",
-            link: "show6/show7.html",
-            category: "مغامرات"
-        }, {
-            title: "بيت التنانين",
-            image: "img/dany5/dany01.jpg",
-            link: "show6/show8.html",
-            category: "خيال علمي"
-        }, {
-            title: "عصر الجليد",
-            image: "img/dany5/dany08.jpg",
-            link: "show6/show9.html",
-            category: "كوميدي"
-        }, {
-            title: "ملكة الثلج",
-            image: "img/dany5/dany02.jpg",
-            link: "show6/show10.html",
-            category: "عائلي"
-        }, {
-            title: "الامبراطور 2000",
-            image: "img/dany5/dany021.jpg",
-            link: "show6/show011.html",
-            category: "كوميدي"
-        }, {
-            title: "الامبراطور2004",
-            image: "img/dany5/dany020.jpg",
-            link: "show6/show012.html",
-            category: "كوميدي"
-        }, {
-            title: "فوق up",
-            image: "img/dany5/dany023.jpg",
-            link: "show6/show013.html",
-            category: "مغامرات"
-        }, {
-            title: "فلم بن تن",
-            image: "img/dany5/dany024.jpg",
-            link: "show6/show014.html",
-            category: "أكشن"
-        }, {
-            title: "قلبا وقالبا",
-            image: "img/dany5/dany022.jpg",
-            link: "show6/show015.html",
-            category: "دراما"
-        }, {
-            title: "الاسد الملك",
-            image: "img/dany5/dany025.jpg",
-            link: "show6/show016.html",
-            category: "عائلي"
-        }, {
-            title: "كوكو",
-            image: "img/dany5/dany026.jpg",
-            link: "show6/show017.html",
-            category: "عائلي"
-        }, {
-            title: "كرتون روح",
-            image: "img/dany5/dany027.jpg",
-            link: "show6/show018.html",
-            category: "دراما"
-        }];
-
-        // إضافة المزيد من الأفلام
-        for (let i = 0; i < 50; i++) {
-            offersDatabase.push(...offersDatabase.slice(0, 20).map(item => ({
-                ...item,
-                title: item.title + " " + (i + 3)
-            })));
-        }
-
-        let autoScrollIntervalMovies;
-        let autoScrollIntervalNewMovies;
-        let autoScrollIntervalOffers;
-        let currentPage = 1;
-        const ITEMS_PER_PAGE = 21;
-        let totalPages = 5;
-        let userInteracted = false;
-
-        // متغيرات للتحكم في التمرير لتحميل المزيد
-        let scrollCount = 0;
-        let lastScrollY = 0;
-        let loadedCount = 0;
-        const MAX_LOADS = 15;
-
-        // نظام الإشعارات
-        function showToast(message, type = 'success', duration = 3000) {
-            // بدون إشعارات
-        }
-
-        // مشاركة الفيلم
-        function shareMovie(title, link, image) {
-            if (navigator.share) {
-                navigator.share({
-                    title: title,
-                    url: link,
-                }).catch(() => {});
-            } else {
-                navigator.clipboard.writeText(link).catch(() => {});
+            // أفلام جيدة (الدرجة الرابعة)
+            {
+                title: "فلم بن تن",
+                description: "فيلم أكشن - بن تن والساعة الفضائية",
+                image: "img/dany5/dany024.jpg",
+                link: "show6/show014.html",
+                year: "2020",
+                rating: "7.8",
+                category: "أكشن",
+                popularity: 8.5
+            }, {
+                title: "الامبراطور 2000",
+                description: "فيلم كوميدي - إمبراطور مشاكس",
+                image: "img/dany5/dany021.jpg",
+                link: "show6/show011.html",
+                year: "2000",
+                rating: "7.9",
+                category: "كوميدي",
+                popularity: 8.4
+            }, {
+                title: "النمله والجراد",
+                description: "فيلم عائلي - قصة كفاح وكسل",
+                image: "img/dany5/dany013.jpg",
+                link: "show6/show3.html",
+                year: "2006",
+                rating: "7.8",
+                category: "عائلي",
+                popularity: 8.3
+            }, {
+                title: "مزرعه فى خطر",
+                description: "فيلم كوميدي - حيوانات المزرعة",
+                image: "img/dany5/dany018.jpg",
+                link: "show6/show5.html",
+                year: "2004",
+                rating: "7.5",
+                category: "كوميدي",
+                popularity: 8.2
+            }, {
+                title: "الامبراطور2004",
+                description: "فيلم كوميدي - مغامرات جديدة",
+                image: "img/dany5/dany020.jpg",
+                link: "show6/show012.html",
+                year: "2004",
+                rating: "7.7",
+                category: "كوميدي",
+                popularity: 8.1
             }
-        }
+        ];
 
-        // تشغيل الفيلم
-        function playMovie(link) {
-            window.open(link, '_blank');
-        }
+        // ترتيب المسلسلات حسب الأفضلية
+        const series = [{
+            title: "كونغ فو باندا - مسلسل",
+            description: "مسلسل أكشن - مغامرات بو وأصدقائه",
+            image: "img/dany5/dany04.jpg",
+            link: "show6/show1.html",
+            year: "2011",
+            rating: "8.5",
+            category: "أكشن",
+            popularity: 9.0
+        }, {
+            title: "بيت التنانين - مسلسل",
+            description: "مسلسل خيال علمي - عالم التنانين",
+            image: "img/dany5/dany01.jpg",
+            link: "show6/show8.html",
+            year: "2019",
+            rating: "9.0",
+            category: "خيال علمي",
+            popularity: 8.9
+        }, {
+            title: "حكاية لعبه - مسلسل",
+            description: "مسلسل كوميدي - مغامرات الألعاب",
+            image: "img/dany5/dany016.jpg",
+            link: "show6/show2.html",
+            year: "2013",
+            rating: "8.9",
+            category: "كوميدي",
+            popularity: 8.8
+        }, {
+            title: "عصر الجليد - مسلسل",
+            description: "مسلسل كوميدي - سكرات والمغامرات",
+            image: "img/dany5/dany08.jpg",
+            link: "show6/show9.html",
+            year: "2015",
+            rating: "8.7",
+            category: "كوميدي",
+            popularity: 8.7
+        }, {
+            title: "عائلة روبنسون - مسلسل",
+            description: "مسلسل مغامرات - اختراعات عجيبة",
+            image: "img/dany5/dany017.jpg",
+            link: "show6/show4.html",
+            year: "2009",
+            rating: "8.2",
+            category: "مغامرات",
+            popularity: 8.5
+        }, {
+            title: "مريدا - مسلسل",
+            description: "مسلسل مغامرات - أميرة شجاعة",
+            image: "img/dany5/dany011.jpg",
+            link: "show6/show7.html",
+            year: "2014",
+            rating: "8.3",
+            category: "مغامرات",
+            popularity: 8.4
+        }, {
+            title: "ليله فى المتحف - مسلسل",
+            description: "مسلسل مغامرات - آثار تتحرك ليلاً",
+            image: "img/dany5/dany019.jpg",
+            link: "show6/show6.html",
+            year: "2016",
+            rating: "8.0",
+            category: "مغامرات",
+            popularity: 8.3
+        }, {
+            title: "مزرعه فى خطر - مسلسل",
+            description: "مسلسل كوميدي - حيوانات مضحكة",
+            image: "img/dany5/dany018.jpg",
+            link: "show6/show5.html",
+            year: "2010",
+            rating: "7.5",
+            category: "كوميدي",
+            popularity: 8.2
+        }, {
+            title: "النمله والجراد - مسلسل",
+            description: "مسلسل عائلي - عبرة وعظة",
+            image: "img/dany5/dany013.jpg",
+            link: "show6/show3.html",
+            year: "2008",
+            rating: "7.8",
+            category: "عائلي",
+            popularity: 8.1
+        }];
 
-        // إغلاق المشغل
-        document.querySelector('.close-player').addEventListener('click', function() {
-            const player = document.getElementById('quick-player');
-            const iframe = document.getElementById('player-iframe');
-            player.classList.remove('active');
-            iframe.src = '';
+        // بيانات العروض - تكبير البيانات لعرض كروت كثيرة
+        let offers = [];
+        // نضيف الأفلام الأساسية
+        movies.forEach(movie => {
+            offers.push({...movie
+            });
         });
-
-        // إضافة لمشاهدة لاحقاً
-        function addToWatchLater(title) {
-            let watchLater = JSON.parse(localStorage.getItem('watchLater') || '[]');
-            if (!watchLater.includes(title)) {
-                watchLater.push(title);
-                localStorage.setItem('watchLater', JSON.stringify(watchLater));
-            }
-        }
-
-        function createCard(item) {
-            return `<div class="card" data-link="${item.link}" data-category="${item.category || 'أكشن'}">
-                <div class="poster">
-                    <img src="${item.image}" alt="${item.title}" loading="lazy">
-                    <div class="quick-actions">
-                        <button class="quick-btn" onclick="event.stopPropagation(); playMovie('${item.link}')" title="مشاهدة الآن">▶</button>
-                        <button class="quick-btn" onclick="event.stopPropagation(); addToWatchLater('${item.title}')" title="مشاهدة لاحقاً">➕</button>
-                        <button class="quick-btn" onclick="event.stopPropagation(); shareMovie('${item.title}', '${item.link}', '${item.image}')" title="مشاركة">🔗</button>
-                    </div>
-                </div>
-                <div class="card-title">${item.title}</div>
-            </div>`;
-        }
-
-        function createOfferCard(item) {
-            return `<div class="offer-card" data-link="${item.link}" data-category="${item.category || 'أكشن'}">
-                <img src="${item.image}" alt="${item.title}" loading="lazy">
-            </div>`;
-        }
-
-        function renderCards(containerId, items) {
-            const container = document.getElementById(containerId);
-            if (container) {
-                if (containerId === 'cards-offers') {
-                    container.innerHTML = items.map(item => createOfferCard(item)).join('');
-                } else {
-                    container.innerHTML = items.map(item => createCard(item)).join('');
-                }
-                setTimeout(() => addCardClickListeners(), 50);
-            }
-        }
-
-        function getPageItems(page) {
-            const startIndex = (page - 1) * ITEMS_PER_PAGE;
-            let items = [];
-            for (let i = 0; i < ITEMS_PER_PAGE; i++) {
-                const index = (startIndex + i) % offersDatabase.length;
-                items.push({...offersDatabase[index]
+        // نضيف نسخ إضافية للأفلام
+        for (let i = 0; i < 5; i++) {
+            movies.slice(0, 12).forEach((movie, index) => {
+                offers.push({
+                    ...movie,
+                    title: movie.title + ' ' + (i + 2),
+                    year: 2020 + i,
+                    rating: (5 + Math.random() * 4).toFixed(1)
                 });
-            }
-            return items;
-        }
-
-        function renderOffersPage(page) {
-            const pageItems = getPageItems(page);
-            renderCards('cards-offers', pageItems);
-
-            document.querySelectorAll('.load-page-button').forEach(btn => btn.classList.remove('active'));
-            const activeBtn = document.getElementById(`page-${page}`);
-            if (activeBtn) activeBtn.classList.add('active');
-
-            currentPage = page;
-            scrollCount = 0;
-            loadedCount = 0;
-
-            if (page === totalPages) {
-                addNewPage();
-            }
-        }
-
-        function addNewPage() {
-            totalPages++;
-            const paginationDiv = document.getElementById('pagination-container');
-            const navNext = document.getElementById('nav-next');
-
-            const newButton = document.createElement('button');
-            newButton.id = `page-${totalPages}`;
-            newButton.className = 'load-page-button';
-            newButton.setAttribute('data-page', totalPages);
-            newButton.textContent = totalPages;
-            newButton.addEventListener('click', function() {
-                renderOffersPage(parseInt(this.getAttribute('data-page')));
-                userInteracted = true;
-                setTimeout(() => userInteracted = false, 10000);
-
-                document.querySelectorAll('.load-page-button').forEach(btn => btn.classList.remove('active'));
-                this.classList.add('active');
             });
-
-            paginationDiv.insertBefore(newButton, navNext);
         }
 
-        // دالة لتحميل المزيد من الأفلام (صفين كاملين)
-        function loadMoreMovies() {
-            if (loadedCount >= MAX_LOADS) return;
+        const pageSize = 6; // كل مرة يفتح 6 كروت
+        let offersIndex = 0;
 
-            const container = document.getElementById('cards-offers');
-            const currentItems = document.querySelectorAll('.offer-card').length;
-
-            // حساب عدد العناصر في صفين بناءً على عرض الشاشة
-            const containerWidth = container.offsetWidth;
-            const cardWidth = 150;
-            const gap = 16;
-            const cardsPerRow = Math.floor(containerWidth / (cardWidth + gap));
-            const cardsToAdd = cardsPerRow * 2;
-
-            const newItems = offersDatabase.slice(currentItems, currentItems + cardsToAdd);
-
-            if (newItems.length > 0) {
-                const newCards = newItems.map(item => createOfferCard(item)).join('');
-                container.insertAdjacentHTML('beforeend', newCards);
-
-                addCardClickListeners();
-                loadedCount++;
-                scrollCount = 0;
-            }
+        // ========== FUNCTIONS ==========
+        function getRatingText(star) {
+            const texts = ["سيئ جداً", "سيئ", "متوسط", "جيد", "ممتاز"];
+            return texts[star - 1] || "";
         }
 
-        function startAutoScroll(containerId, speed = 4000) {
-            const container = document.getElementById(containerId);
+        function renderCards(list, containerId) {
+            const container = document.querySelector(containerId);
             if (!container) return;
-            stopAutoScroll(containerId);
 
-            const intervalId = setInterval(() => {
-                if (userInteracted) return;
+            container.innerHTML = "";
+            list.forEach((item, index) => {
+                const card = document.createElement("div");
+                card.className = "card";
 
-                if (container.scrollLeft + container.clientWidth >= container.scrollWidth - 50) {
-                    container.scrollTo({
-                        left: 0,
-                        behavior: 'smooth'
-                    });
-                } else {
-                    container.scrollBy({
-                        left: 300,
-                        behavior: 'smooth'
-                    });
+                const uniqueId = containerId.replace(/[^a-z0-9]/gi, '') + '-' + index;
+                const savedRating = localStorage.getItem('rating-' + uniqueId) || '0';
+
+                let starsHTML = '';
+                for (let i = 5; i >= 1; i--) {
+                    starsHTML += `
+                        <input type="radio" id="star${i}-${uniqueId}" name="rating-${uniqueId}" value="${i}" ${savedRating == i ? 'checked' : ''}>
+                        <label for="star${i}-${uniqueId}" onclick="localStorage.setItem('rating-${uniqueId}', '${i}'); document.getElementById('rating-text-${uniqueId}').innerText = getRatingText(${i});">★</label>
+                    `;
                 }
-            }, speed);
 
-            if (containerId === 'cards-movies') autoScrollIntervalMovies = intervalId;
-            else if (containerId === 'cards-new-movies') autoScrollIntervalNewMovies = intervalId;
-            else if (containerId === 'cards-offers') autoScrollIntervalOffers = intervalId;
-        }
-
-        function stopAutoScroll(containerId) {
-            if (containerId === 'cards-movies' && autoScrollIntervalMovies) {
-                clearInterval(autoScrollIntervalMovies);
-                autoScrollIntervalMovies = null;
-            } else if (containerId === 'cards-new-movies' && autoScrollIntervalNewMovies) {
-                clearInterval(autoScrollIntervalNewMovies);
-                autoScrollIntervalNewMovies = null;
-            } else if (containerId === 'cards-offers' && autoScrollIntervalOffers) {
-                clearInterval(autoScrollIntervalOffers);
-                autoScrollIntervalOffers = null;
-            }
-        }
-
-        function addCardClickListeners() {
-            const allCards = document.querySelectorAll('.card, .offer-card');
-            allCards.forEach(card => {
-                card.removeEventListener('click', handleCardClick);
-                card.addEventListener('click', handleCardClick, false);
+                card.innerHTML = `
+                    <a href="${item.link}" class="card-link" target="_blank"></a>
+                    <div class="poster">
+                        <img src="${item.image}" alt="${item.title}" loading="lazy">
+                        <div class="play-overlay">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <div class="rating-badge">
+                            <i class="fas fa-star"></i> ${item.rating || '8.5'}
+                        </div>
+                        <div class="year-badge">
+                            ${item.year || '2025'}
+                        </div>
+                    </div>
+                    <div class="data-list">
+                        <h1>${item.title}</h1>
+                        <p>${item.description}</p>
+                        <div class="div-star">
+                            <div class="stars">
+                                ${starsHTML}
+                            </div>
+                            <p id="rating-text-${uniqueId}">${getRatingText(parseInt(savedRating))}</p>
+                            <a href="${item.link}" class="button-star" target="_blank">شاهد الآن</a>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(card);
             });
         }
 
-        function handleCardClick(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            const link = this.getAttribute('data-link');
-            if (link) {
-                window.open(link, '_blank');
-            }
-        }
+        function renderOffers() {
+            const container = document.getElementById("cards-offers");
+            const nextOffers = offers.slice(offersIndex, offersIndex + pageSize);
 
-        // متابعة التمرير لتحميل المزيد
-        function handleScroll() {
-            const scrollY = window.scrollY;
+            nextOffers.forEach((item) => {
+                const card = document.createElement("div");
+                card.className = "card";
 
-            if (scrollY > lastScrollY) {
-                // التمرير للأسفل
-                if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 100) {
-                    scrollCount++;
-
-                    if (scrollCount >= 1 && loadedCount < MAX_LOADS) {
-                        loadMoreMovies();
-                    }
-                }
-            }
-
-            lastScrollY = scrollY;
-        }
-
-        function initSearch() {
-            const searchInput = document.getElementById('searchInput');
-            const searchButton = document.getElementById('searchButton');
-
-            function performSearch() {
-                const query = searchInput.value.toLowerCase().trim();
-                userInteracted = true;
-                setTimeout(() => userInteracted = false, 10000);
-
-                if (query === '') {
-                    renderCards('cards-movies', movies.slice(0, ITEMS_PER_PAGE));
-                    renderCards('cards-new-movies', newMovies.slice(0, ITEMS_PER_PAGE));
-                    renderOffersPage(1);
-                    return;
-                }
-                const filteredMovies = movies.filter(movie => movie.title.toLowerCase().includes(query));
-                renderCards('cards-movies', filteredMovies.length ? filteredMovies : movies.slice(0, ITEMS_PER_PAGE));
-                renderCards('cards-new-movies', filteredMovies.length ? filteredMovies : newMovies.slice(0, ITEMS_PER_PAGE));
-                const filteredOffers = offersDatabase.filter(offer => offer.title.toLowerCase().includes(query));
-                if (filteredOffers.length) {
-                    renderCards('cards-offers', filteredOffers.slice(0, ITEMS_PER_PAGE));
-                } else {
-                    renderOffersPage(1);
-                }
-            }
-
-            if (searchButton) searchButton.addEventListener('click', performSearch);
-            if (searchInput) {
-                searchInput.addEventListener('keypress', (e) => {
-                    if (e.key === 'Enter') performSearch();
-                });
-            }
-        }
-
-        function initScrollButtons() {
-            const containers = {
-                'cards-new-movies': {
-                    left: '.new-movies-left',
-                    right: '.new-movies-right'
-                },
-                'cards-movies': {
-                    left: '.movies-left',
-                    right: '.movies-right'
-                }
-            };
-
-            Object.entries(containers).forEach(([containerId, buttons]) => {
-                const leftBtn = document.querySelector(buttons.left);
-                const rightBtn = document.querySelector(buttons.right);
-                const container = document.getElementById(containerId);
-
-                if (leftBtn) {
-                    leftBtn.addEventListener('click', () => {
-                        container.scrollBy({
-                            left: -300,
-                            behavior: 'smooth'
-                        });
-                        userInteracted = true;
-                        setTimeout(() => userInteracted = false, 10000);
-                    });
-                }
-
-                if (rightBtn) {
-                    rightBtn.addEventListener('click', () => {
-                        container.scrollBy({
-                            left: 300,
-                            behavior: 'smooth'
-                        });
-                        userInteracted = true;
-                        setTimeout(() => userInteracted = false, 10000);
-                    });
-                }
-            });
-        }
-
-        function initPageButtons() {
-            const navPrev = document.getElementById('nav-prev');
-            const navNext = document.getElementById('nav-next');
-
-            if (navPrev) {
-                navPrev.addEventListener('click', function() {
-                    const activeBtn = document.querySelector('.load-page-button.active');
-                    if (activeBtn) {
-                        const currentPageNum = parseInt(activeBtn.getAttribute('data-page'));
-                        if (currentPageNum > 1) {
-                            renderOffersPage(currentPageNum - 1);
-                            userInteracted = true;
-                            setTimeout(() => userInteracted = false, 10000);
-                        }
-                    }
-                });
-            }
-
-            if (navNext) {
-                navNext.addEventListener('click', function() {
-                    const activeBtn = document.querySelector('.load-page-button.active');
-                    if (activeBtn) {
-                        const currentPageNum = parseInt(activeBtn.getAttribute('data-page'));
-                        const newPage = currentPageNum + 1;
-
-                        while (totalPages < newPage) {
-                            addNewPage();
-                        }
-
-                        renderOffersPage(newPage);
-                        userInteracted = true;
-                        setTimeout(() => userInteracted = false, 10000);
-                    }
-                });
-            }
-
-            for (let i = 1; i <= 5; i++) {
-                const btn = document.getElementById(`page-${i}`);
-                if (btn) {
-                    btn.addEventListener('click', function() {
-                        renderOffersPage(parseInt(this.getAttribute('data-page')));
-                        userInteracted = true;
-                        setTimeout(() => userInteracted = false, 10000);
-
-                        document.querySelectorAll('.load-page-button').forEach(btn => btn.classList.remove('active'));
-                        this.classList.add('active');
-                    });
-                }
-            }
-        }
-
-        function initCategories() {
-            const categoryBtns = document.querySelectorAll('.category-btn');
-            categoryBtns.forEach(btn => {
-                btn.addEventListener('click', function() {
-                    categoryBtns.forEach(b => b.classList.remove('active'));
-                    this.classList.add('active');
-
-                    const category = this.textContent;
-                    userInteracted = true;
-
-                    if (category === 'الكل') {
-                        renderCards('cards-movies', movies.slice(0, ITEMS_PER_PAGE));
-                        renderCards('cards-new-movies', newMovies.slice(0, ITEMS_PER_PAGE));
-                        renderOffersPage(1);
-                    } else {
-                        const filtered = movies.filter(m => m.category === category);
-                        renderCards('cards-movies', filtered.length ? filtered : movies.slice(0, ITEMS_PER_PAGE));
-                        renderCards('cards-new-movies', filtered.length ? filtered : newMovies.slice(0, ITEMS_PER_PAGE));
-                    }
-
-                    setTimeout(() => userInteracted = false, 10000);
-                });
-            });
-        }
-
-        function initTheme() {
-            const themeToggle = document.getElementById('theme-toggle');
-            themeToggle.addEventListener('click', function() {
-                document.body.classList.toggle('light-theme');
-                this.textContent = document.body.classList.contains('light-theme') ? '☀️' : '🌙';
-            });
-        }
-
-        function initBackToTop() {
-            const backToTop = document.getElementById('back-to-top');
-
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 500) {
-                    backToTop.classList.add('visible');
-                } else {
-                    backToTop.classList.remove('visible');
-                }
+                card.innerHTML = `
+                    <a href="${item.link}" class="card-link" target="_blank"></a>
+                    <div class="poster">
+                        <img src="${item.image}" alt="${item.title}" loading="lazy">
+                        <div class="play-overlay">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <div class="rating-badge">
+                            <i class="fas fa-star"></i> ${item.rating}
+                        </div>
+                        <div class="year-badge">
+                            ${item.year}
+                        </div>
+                    </div>
+                    <div class="data-list">
+                        <h1>${item.title}</h1>
+                        <p>${item.description}</p>
+                        <a href="${item.link}" class="button-star" target="_blank">شاهد الآن</a>
+                    </div>
+                `;
+                container.appendChild(card);
             });
 
-            backToTop.addEventListener('click', () => {
-                window.scrollTo({
-                    top: 0,
+            offersIndex += pageSize;
+            if (offersIndex >= offers.length) {
+                document.getElementById("load-more-offers").style.display = "none";
+            }
+        }
+
+        function filterCards(query) {
+            const q = query.trim().toLowerCase();
+            if (q === "") {
+                renderCards(movies, "#cards-movies");
+                renderCards(series, "#cards-series");
+            } else {
+                const filteredMovies = movies.filter(movie => movie.title.toLowerCase().includes(q));
+                const filteredSeries = series.filter(serie => serie.title.toLowerCase().includes(q));
+                renderCards(filteredMovies, "#cards-movies");
+                renderCards(filteredSeries, "#cards-series");
+            }
+        }
+
+        // ========== SCROLL FUNCTIONS ==========
+        let autoScrollInterval;
+        let pauseTimeout;
+
+        function autoScroll(containerId) {
+            const container = document.querySelector(containerId);
+            if (!container) return;
+
+            const maxScroll = container.scrollWidth - container.clientWidth;
+            if (container.scrollLeft >= maxScroll - 10) {
+                container.scrollLeft = 0;
+            } else {
+                container.scrollBy({
+                    left: 800,
                     behavior: 'smooth'
                 });
-            });
+            }
         }
 
-        function initPage() {
-            // تم إزالة كود شاشة الترحيب بالكامل
+        function startAutoScroll() {
+            autoScrollInterval = setInterval(() => {
+                autoScroll('#cards-movies');
+                autoScroll('#cards-series');
+            }, 5000);
+        }
 
-            // إخفاء شريط التحميل بشكل أسرع
-            const loadingBar = document.getElementById('loading-bar');
-            if (loadingBar) {
-                setTimeout(() => {
-                    loadingBar.style.opacity = '0';
-                    setTimeout(() => loadingBar.style.display = 'none', 300);
-                }, 500); // تم تقليل المدة
+        function pauseAutoScroll() {
+            clearInterval(autoScrollInterval);
+            clearTimeout(pauseTimeout);
+            pauseTimeout = setTimeout(startAutoScroll, 20000);
+        }
+
+        // ========== INITIALIZATION ==========
+        document.addEventListener("DOMContentLoaded", function() {
+            // عرض البيانات - نبدأ بأول 12 كارت (صفين)
+            offersIndex = 0;
+            // نعرض أول 6 كروت
+            renderOffers(); // الصف الأول
+            // نعرض الـ 6 كروت التالية
+            renderOffers(); // الصف الثاني
+
+            renderCards(movies, "#cards-movies");
+            renderCards(series, "#cards-series");
+
+            // زر تحميل المزيد
+            document.getElementById("load-more-offers").addEventListener("click", renderOffers);
+
+            // البحث
+            const searchInput = document.getElementById("searchInput");
+            const searchBtn = document.getElementById("searchBtn");
+
+            if (searchBtn && searchInput) {
+                searchBtn.addEventListener("click", function() {
+                    filterCards(searchInput.value);
+                });
+                searchInput.addEventListener("keydown", function(e) {
+                    if (e.key === "Enter") filterCards(searchInput.value);
+                });
             }
 
-            renderCards('cards-movies', movies.slice(0, ITEMS_PER_PAGE));
-            renderCards('cards-new-movies', newMovies.slice(0, ITEMS_PER_PAGE));
-            renderOffersPage(1);
+            // أزرار التمرير للأفلام
+            var moviesLeft = document.querySelector('.movies-left');
+            var moviesRight = document.querySelector('.movies-right');
+            var seriesLeft = document.querySelector('.series-left');
+            var seriesRight = document.querySelector('.series-right');
+            var cardsMovies = document.querySelector('#cards-movies');
+            var cardsSeries = document.querySelector('#cards-series');
 
-            initSearch();
-            initScrollButtons();
-            initPageButtons();
-            initCategories();
-            initTheme();
-            initBackToTop();
+            if (moviesLeft) {
+                moviesLeft.addEventListener('click', function() {
+                    if (cardsMovies) cardsMovies.scrollBy({
+                        left: -800,
+                        behavior: 'smooth'
+                    });
+                    pauseAutoScroll();
+                });
+            }
 
-            // إضافة مستمع التمرير
-            window.addEventListener('scroll', handleScroll);
+            if (moviesRight) {
+                moviesRight.addEventListener('click', function() {
+                    if (cardsMovies) cardsMovies.scrollBy({
+                        left: 800,
+                        behavior: 'smooth'
+                    });
+                    pauseAutoScroll();
+                });
+            }
 
-            setTimeout(() => {
-                startAutoScroll('cards-movies', 4000);
-                startAutoScroll('cards-new-movies', 4000);
-                startAutoScroll('cards-offers', 4000);
-            }, 1000); // تم تقليل التأخير
+            if (seriesLeft) {
+                seriesLeft.addEventListener('click', function() {
+                    if (cardsSeries) cardsSeries.scrollBy({
+                        left: -800,
+                        behavior: 'smooth'
+                    });
+                    pauseAutoScroll();
+                });
+            }
 
-            document.addEventListener('visibilitychange', function() {
-                if (document.hidden) {
-                    stopAutoScroll('cards-movies');
-                    stopAutoScroll('cards-new-movies');
-                    stopAutoScroll('cards-offers');
+            if (seriesRight) {
+                seriesRight.addEventListener('click', function() {
+                    if (cardsSeries) cardsSeries.scrollBy({
+                        left: 800,
+                        behavior: 'smooth'
+                    });
+                    pauseAutoScroll();
+                });
+            }
+
+            // بدء التمرير التلقائي
+            startAutoScroll();
+
+            // شريط التحميل
+            window.addEventListener('scroll', function() {
+                var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                var scrolled = (winScroll / height) * 100;
+                document.getElementById('loadingBar').style.width = scrolled + '%';
+            });
+
+            // تغيير لون الهيدر عند التمرير
+            window.addEventListener('scroll', function() {
+                var header = document.getElementById('header');
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
                 } else {
-                    setTimeout(() => {
-                        startAutoScroll('cards-movies', 4000);
-                        startAutoScroll('cards-new-movies', 4000);
-                        startAutoScroll('cards-offers', 4000);
-                    }, 1000);
+                    header.classList.remove('scrolled');
                 }
             });
-        }
 
-        document.addEventListener('DOMContentLoaded', initPage);
-        window.changeEpisode = function(episode) {
-            window.currentEpisode = episode;
-        };
+            // تبديل الثيم (ليلي/نهاري)
+            var themeToggle = document.getElementById('themeToggle');
+            var themeIcon = themeToggle.querySelector('i');
+
+            var savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'light') {
+                document.body.setAttribute('data-theme', 'light');
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+            }
+
+            themeToggle.addEventListener('click', function() {
+                if (document.body.getAttribute('data-theme') === 'light') {
+                    document.body.removeAttribute('data-theme');
+                    themeIcon.classList.remove('fa-sun');
+                    themeIcon.classList.add('fa-moon');
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    document.body.setAttribute('data-theme', 'light');
+                    themeIcon.classList.remove('fa-moon');
+                    themeIcon.classList.add('fa-sun');
+                    localStorage.setItem('theme', 'light');
+                }
+            });
+
+            // قائمة الموبايل
+            var menuToggle = document.getElementById('menuToggle');
+            var navMenu = document.querySelector('.nav-menu');
+
+            menuToggle.addEventListener('click', function() {
+                if (navMenu.style.display === 'flex') {
+                    navMenu.style.display = 'none';
+                } else {
+                    navMenu.style.display = 'flex';
+                    navMenu.style.position = 'absolute';
+                    navMenu.style.top = '100%';
+                    navMenu.style.left = '0';
+                    navMenu.style.right = '0';
+                    navMenu.style.background = 'var(--bg-secondary)';
+                    navMenu.style.padding = '1rem';
+                    navMenu.style.flexDirection = 'column';
+                    navMenu.style.alignItems = 'center';
+                }
+            });
+
+            // تحديث روابط التنشيط
+            var sections = ['movies', 'series', 'offers'];
+            window.addEventListener('scroll', function() {
+                var current = '';
+                sections.forEach(function(section) {
+                    var element = document.getElementById(section);
+                    if (element) {
+                        var rect = element.getBoundingClientRect();
+                        if (rect.top <= 100 && rect.bottom >= 100) {
+                            current = section;
+                        }
+                    }
+                });
+
+                document.querySelectorAll('.nav-menu a').forEach(function(link) {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === '#' + current) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+        });
+
+        // دالة التقييم (تكون في النطاق العام)
+        window.getRatingText = getRatingText;
     </script>
 </body>
 
