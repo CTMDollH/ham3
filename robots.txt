@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /show6/private/
+Disallow: /admin/
+
+Sitemap: https://ctmdollh.github.io/ham3/sitemap.xml
