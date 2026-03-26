@@ -3,19 +3,76 @@
 
 <head>
     <meta charset="UTF-8" />
+    <!-- ========== بداية الحماية ========== -->
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+    <meta name="googlebot" content="noindex, nofollow, noarchive">
+    <meta name="referrer" content="no-referrer">
+    
+    <script>
+        // منع النقر بزر الماوس الأيمن
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+            return false;
+        });
+
+        // منع اختصارات فتح أدوات المطور
+        document.addEventListener('keydown', function(e) {
+            // F12
+            if (e.key === 'F12') {
+                e.preventDefault();
+                return false;
+            }
+            // Ctrl+Shift+I
+            if (e.ctrlKey && e.shiftKey && e.key === 'I') {
+                e.preventDefault();
+                return false;
+            }
+            // Ctrl+U (عرض المصدر)
+            if (e.ctrlKey && e.key === 'u') {
+                e.preventDefault();
+                return false;
+            }
+            // Ctrl+Shift+J
+            if (e.ctrlKey && e.shiftKey && e.key === 'J') {
+                e.preventDefault();
+                return false;
+            }
+            // Ctrl+S (حفظ الصفحة)
+            if (e.ctrlKey && e.key === 's') {
+                e.preventDefault();
+                return false;
+            }
+        });
+    </script>
+    
+    <style>
+        /* منع تحديد النص */
+        body {
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+        /* منع سحب الصور */
+        img {
+            -webkit-user-drag: none;
+            user-drag: none;
+            pointer-events: auto;
+        }
+    </style>
+    <!-- ========== نهاية الحماية ========== -->
+
     <!-- Theme Colors -->
     <meta name="theme-color" content="#0b0c10">
     <meta name="msapplication-TileColor" content="#0b0c10">
 
-    <!-- Favicon / Icons -->
-    <link rel="icon" href="/ham3/favicon.ico/favicon.ico">
-    <link rel="icon" type="image/png" sizes="16x16" href="/ham3/favicon.ico/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/ham3/favicon.ico/favicon-32x32.png">
-    <link rel="apple-touch-icon" href="/ham3/favicon.ico/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/ham3/favicon.ico/android-chrome-192x192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="/ham3/favicon.ico/android-chrome-512x512.png">
-
-    <!-- Manifest for PWA -->
+    <!-- Favicon / Icons - المسار الصحيح -->
+    <link rel="icon" type="image/x-icon" href="/ham3/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/ham3/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/ham3/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/ham3/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/ham3/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/ham3/android-chrome-512x512.png">
     <link rel="manifest" href="/ham3/site.webmanifest">
 
     <!-- Google Fonts -->
@@ -1495,7 +1552,7 @@
                 card.innerHTML = `
                     <a href="${item.link}" class="card-link" target="_blank"></a>
                     <div class="poster">
-                        <img src="${item.image}" alt="${item.title}" loading="lazy">
+                        <img src="${item.image}" alt="${item.title}" loading="lazy" draggable="false">
                         <div class="play-overlay">
                             <i class="fas fa-play"></i>
                         </div>
@@ -1533,7 +1590,7 @@
                 card.innerHTML = `
                     <a href="${item.link}" class="card-link" target="_blank"></a>
                     <div class="poster">
-                        <img src="${item.image}" alt="${item.title}" loading="lazy">
+                        <img src="${item.image}" alt="${item.title}" loading="lazy" draggable="false">
                         <div class="play-overlay">
                             <i class="fas fa-play"></i>
                         </div>
