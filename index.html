@@ -3,11 +3,11 @@
 
 <head>
     <meta charset="UTF-8" />
-    <!-- ========== بداية الحماية ========== -->
-    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
-    <meta name="googlebot" content="noindex, nofollow, noarchive">
-    <meta name="referrer" content="no-referrer">
-    
+    <!-- ========== بداية الحماية (تم تعديل robots للسماح بالفهرسة) ========== -->
+    <meta name="robots" content="index, follow, noarchive, nosnippet">
+    <meta name="googlebot" content="index, follow, noarchive">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+
     <script>
         // منع النقر بزر الماوس الأيمن
         document.addEventListener('contextmenu', function(e) {
@@ -44,9 +44,10 @@
             }
         });
     </script>
-    
+
     <style>
         /* منع تحديد النص */
+        
         body {
             user-select: none;
             -webkit-user-select: none;
@@ -54,6 +55,7 @@
             -ms-user-select: none;
         }
         /* منع سحب الصور */
+        
         img {
             -webkit-user-drag: none;
             user-drag: none;
@@ -66,7 +68,7 @@
     <meta name="theme-color" content="#0b0c10">
     <meta name="msapplication-TileColor" content="#0b0c10">
 
-    <!-- Favicon / Icons - المسار الصحيح بعد نقل الملفات إلى مجلد icons -->
+    <!-- Favicon / Icons -->
     <link rel="icon" type="image/x-icon" href="/ham3/icons/favicon.ico">
     <link rel="icon" type="image/png" sizes="16x16" href="/ham3/icons/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/ham3/icons/favicon-32x32.png">
@@ -74,29 +76,30 @@
     <link rel="icon" type="image/png" sizes="192x192" href="/ham3/icons/android-chrome-192x192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="/ham3/icons/android-chrome-512x512.png">
     <link rel="manifest" href="/ham3/site.webmanifest">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/ham3/sitemap.xml">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Font Awesome للايقونات -->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- Responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Title محسن -->
-    <title>كرتون HaM- مشاهدة أفلام ومسلسلات كرتون أنمي مدبلجة مجاناً</title>
+    <title>كرتون HaM | مشاهدة أفلام ومسلسلات كرتون وأنمي مدبلجة مجاناً</title>
 
     <!-- Meta Description & SEO محسنة -->
-    <meta name="description" content="كرتون هايبر: أكبر مكتبة أفلام ومسلسلات كرتون وأنمي مدبلجة ومترجمة مجاناً. شاهد الأسد الملك، فوق، كوكو، كونغ فو باندا، بن تن، حكاية لعبة، عصر الجليد، ملكة الثلج وأكثر. جودة HD">
+    <meta name="description" content="كرتون HaM - أكبر مكتبة أفلام ومسلسلات كرتون وأنمي مدبلجة ومترجمة مجاناً بجودة HD. شاهد الأسد الملك، كونغ فو باندا، بن تن، حكاية لعبة، عصر الجليد، ملكة الثلج وأكثر من 40 فيلماً ومسلسلاً.">
     <meta name="keywords" content="كرتون, أفلام كرتون, مسلسلات كرتون, أنمي, كرتون نتورك, سبيس تون, بن تن, كونغ فو باندا, حكاية لعبة, توم وجيري, سبونج بوب, كابتن ماجد, ون بيس, دراغون بول, الأسد الملك, فوق, كوكو, قلبا وقالبا, عصر الجليد, ملكة الثلج, مريدا, ديزني, بيكسار, كرتون مدبلج, أنمي مترجم, أفلام كرتون 2024, مسلسلات كرتون قديمة">
     <link rel="canonical" href="https://ctmdollh.github.io/ham3/">
     <meta name="google-site-verification" content="cbmrUZqhOBck9gavk0inoYqWikuNfn-Jlj9K5ca3nI0" />
     <meta name="author" content="كرتون هايبر">
     <meta name="robots" content="index, follow">
 
-    <!-- Open Graph / Social Media محسن -->
+    <!-- Open Graph / Social Media -->
     <meta property="og:title" content="كرتون هايبر - مشاهدة أفلام ومسلسلات كرتون وأنمي مجاناً">
     <meta property="og:description" content="أكبر موقع لمشاهدة أفلام ومسلسلات الكرتون والأنمي المدبلجة والمترجمة بجودة عالية HD">
     <meta property="og:image" content="https://ctmdollh.github.io/ham3/img/dany5/dany033.png">
@@ -112,6 +115,37 @@
 
     <!-- Monetag -->
     <meta name="monetag" content="b0ddbd6219e97ff8d3f2ff7dc2b61671">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "كرتون HaM",
+        "url": "https://ctmdollh.github.io/ham3/",
+        "description": "أكبر مكتبة أفلام ومسلسلات كرتون وأنمي مدبلجة ومترجمة مجاناً",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://ctmdollh.github.io/ham3/?s={search_term_string}",
+            "query-input": "required name=search_term_string"
+        },
+        "inLanguage": "ar"
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "كرتون HaM",
+        "url": "https://ctmdollh.github.io/ham3/",
+        "logo": "https://ctmdollh.github.io/ham3/icons/android-chrome-512x512.png",
+        "sameAs": [
+            "https://wa.me/201142009562",
+            "https://t.me/201142009562"
+        ]
+    }
+    </script>
 
     <style>
         /* ========== RESET & VARIABLES ========== */
@@ -746,7 +780,7 @@
         .card .data-list .button-star:hover::before {
             left: 100%;
         }
-        /* ========== NEWSLETTER SECTION - واتساب وتليجرام ========== */
+        /* ========== NEWSLETTER SECTION ========== */
         
         .newsletter {
             max-width: 1400px;
@@ -820,10 +854,6 @@
             transition: var(--transition);
             border: 2px solid transparent;
             color: white;
-        }
-        
-        .social-subscribe a i {
-            font-size: 1.3rem;
         }
         
         .social-subscribe .whatsapp-btn {
@@ -1065,7 +1095,7 @@
     <!-- شريط التحميل المتحرك -->
     <div class="loading-bar" id="loadingBar"></div>
 
-    <!-- الهيدر الجديد -->
+    <!-- الهيدر -->
     <header class="header" id="header">
         <div class="header-container">
             <div class="logo">
@@ -1103,13 +1133,13 @@
         </div>
     </header>
 
-    <!-- قسم الأفلام (مرفوع مكان الهيرو) -->
+    <!-- قسم الأفلام -->
     <section id="movies" class="section" style="padding-top: 120px;">
         <div class="section-header">
             <div class="section-title-wrapper">
                 <span class="section-badge">أفلام حصرية</span>
                 <h2 class="section-title">أحدث <span>الأفلام</span></h2>
-                <p class="section-subtitle">تشكيلة مميزة من أحدث أفلام الكرتون والأنمي</p>
+                <p class="section-subtitle">20 فيلماً من أفضل أفلام الكرتون والأنمي</p>
             </div>
             <div class="section-controls">
                 <button class="control-btn movies-left"><i class="fas fa-chevron-left"></i></button>
@@ -1128,7 +1158,7 @@
             <div class="section-title-wrapper">
                 <span class="section-badge">مسلسلات حصرية</span>
                 <h2 class="section-title">أفضل <span>المسلسلات</span></h2>
-                <p class="section-subtitle">أشهر مسلسلات الكرتون والأنمي بتقنية عالية</p>
+                <p class="section-subtitle">20 مسلسلاً من أشهر مسلسلات الكرتون والأنمي</p>
             </div>
             <div class="section-controls">
                 <button class="control-btn series-left"><i class="fas fa-chevron-left"></i></button>
@@ -1141,7 +1171,7 @@
         </div>
     </section>
 
-    <!-- قسم العروض المميزة - 6 كروت في الصف -->
+    <!-- قسم العروض المميزة -->
     <section id="offers" class="section offers-section">
         <div class="section-header">
             <div class="section-title-wrapper">
@@ -1160,7 +1190,7 @@
         </div>
     </section>
 
-    <!-- قسم النشرة البريدية - واتساب وتليجرام -->
+    <!-- قسم واتساب وتليجرام -->
     <section class="newsletter">
         <div class="newsletter-content">
             <h3>اشترك في القناة</h3>
@@ -1182,7 +1212,7 @@
         </div>
     </section>
 
-    <!-- الفوتر - مع واتساب وتليجرام -->
+    <!-- الفوتر -->
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-section">
@@ -1239,305 +1269,293 @@
     </footer>
 
     <script>
-        // ========== DATA ==========
-        // ترتيب الأفلام من الأفضل إلى الأقل (حسب التقييم والشهرة)
-        const movies = [
-            // الأفلام الأيقونية والتقييمات العالية (الدرجة الأولى)
-            {
-                title: "الأسد الملك",
-                description: "فيلم كرتون كلاسيكي - أعظم أفلام ديزني على الإطلاق",
-                image: "img/dany5/dany025.jpg",
-                link: "show6/show016.html",
-                year: "1994",
-                rating: "9.5",
-                category: "عائلي",
-                popularity: 10
-            }, {
-                title: "فوق Up",
-                description: "فيلم مغامرات رائع - من أفضل أفلام بيكسار",
-                image: "img/dany5/dany023.jpg",
-                link: "show6/show013.html",
-                year: "2009",
-                rating: "9.2",
-                category: "مغامرات",
-                popularity: 9.9
-            }, {
-                title: "كوكو",
-                description: "فيلم عائلي مؤثر - حائز على جائزة الأوسكار",
-                image: "img/dany5/dany026.jpg",
-                link: "show6/show017.html",
-                year: "2017",
-                rating: "9.3",
-                category: "عائلي",
-                popularity: 9.8
-            }, {
-                title: "قلبا وقالبا",
-                description: "فيلم دراما رائع - من إبداعات بيكسار",
-                image: "img/dany5/dany022.jpg",
-                link: "show6/show015.html",
-                year: "2015",
-                rating: "8.9",
-                category: "دراما",
-                popularity: 9.7
-            }, {
-                title: "كرتون روح",
-                description: "فيلم دراما رائع - موسيقى جاز رائعة",
-                image: "img/dany5/dany027.jpg",
-                link: "show6/show018.html",
-                year: "2020",
-                rating: "8.6",
-                category: "دراما",
-                popularity: 9.6
-            },
-
-            // أفلام شهرة عالية (الدرجة الثانية)
-            {
-                title: "كونغ فو باندا",
-                description: "فيلم أكشن ومغامرات - بو والمحاربين الأسطوريين",
-                image: "img/dany5/dany04.jpg",
-                link: "show6/show1.html",
-                year: "2008",
-                rating: "8.5",
-                category: "أكشن",
-                popularity: 9.5
-            }, {
-                title: "حكاية لعبه",
-                description: "فيلم كوميدي ومغامرات - وودي وباز يير",
-                image: "img/dany5/dany016.jpg",
-                link: "show6/show2.html",
-                year: "1995",
-                rating: "8.9",
-                category: "كوميدي",
-                popularity: 9.4
-            }, {
-                title: "عصر الجليد",
-                description: "فيلم كوميدي - مانفريد وسيد ودييغو",
-                image: "img/dany5/dany08.jpg",
-                link: "show6/show9.html",
-                year: "2002",
-                rating: "8.7",
-                category: "كوميدي",
-                popularity: 9.3
-            }, {
-                title: "ملكة الثلج",
-                description: "فيلم عائلي - مغامرة إلسا وآنا",
-                image: "img/dany5/dany02.jpg",
-                link: "show6/show10.html",
-                year: "2013",
-                rating: "8.4",
-                category: "عائلي",
-                popularity: 9.2
-            }, {
-                title: "مريدا",
-                description: "فيلم مغامرات - أميرة أسكتلندا الشجاعة",
-                image: "img/dany5/dany011.jpg",
-                link: "show6/show7.html",
-                year: "2012",
-                rating: "8.3",
-                category: "مغامرات",
-                popularity: 9.1
-            }, {
-                title: "بيت التنانين",
-                description: "فيلم خيال علمي - عجائب التنانين",
-                image: "img/dany5/dany01.jpg",
-                link: "show6/show8.html",
-                year: "2010",
-                rating: "9.0",
-                category: "خيال علمي",
-                popularity: 9.0
-            },
-
-            // أفلام ممتازة (الدرجة الثالثة)
-            {
-                title: "عائلة روبنسون",
-                description: "فيلم مغامرات - عائلة مخترعين",
-                image: "img/dany5/dany017.jpg",
-                link: "show6/show4.html",
-                year: "2007",
-                rating: "8.2",
-                category: "مغامرات",
-                popularity: 8.8
-            }, {
-                title: "ليله فى المتحف",
-                description: "فيلم مغامرات - متحف التاريخ الطبيعي",
-                image: "img/dany5/dany019.jpg",
-                link: "show6/show6.html",
-                year: "2006",
-                rating: "8.0",
-                category: "مغامرات",
-                popularity: 8.7
-            },
-
-            // أفلام جيدة (الدرجة الرابعة)
-            {
-                title: "فلم بن تن",
-                description: "فيلم أكشن - بن تن والساعة الفضائية",
-                image: "img/dany5/dany024.jpg",
-                link: "show6/show014.html",
-                year: "2020",
-                rating: "7.8",
-                category: "أكشن",
-                popularity: 8.5
-            }, {
-                title: "الامبراطور 2000",
-                description: "فيلم كوميدي - إمبراطور مشاكس",
-                image: "img/dany5/dany021.jpg",
-                link: "show6/show011.html",
-                year: "2000",
-                rating: "7.9",
-                category: "كوميدي",
-                popularity: 8.4
-            }, {
-                title: "النمله والجراد",
-                description: "فيلم عائلي - قصة كفاح وكسل",
-                image: "img/dany5/dany013.jpg",
-                link: "show6/show3.html",
-                year: "2006",
-                rating: "7.8",
-                category: "عائلي",
-                popularity: 8.3
-            }, {
-                title: "مزرعه فى خطر",
-                description: "فيلم كوميدي - حيوانات المزرعة",
-                image: "img/dany5/dany018.jpg",
-                link: "show6/show5.html",
-                year: "2004",
-                rating: "7.5",
-                category: "كوميدي",
-                popularity: 8.2
-            }, {
-                title: "الامبراطور2004",
-                description: "فيلم كوميدي - مغامرات جديدة",
-                image: "img/dany5/dany020.jpg",
-                link: "show6/show012.html",
-                year: "2004",
-                rating: "7.7",
-                category: "كوميدي",
-                popularity: 8.1
-            }
-        ];
-
-        // ترتيب المسلسلات حسب الأفضلية
-        const series = [{
-            title: "كونغ فو باندا - مسلسل",
-            description: "مسلسل أكشن - مغامرات بو وأصدقائه",
+        // ========== 20 فيلماً مع الروابط الصحيحة ==========
+        const movies = [{
+            title: "الأسد الملك",
+            description: "فيلم كرتون كلاسيكي - أعظم أفلام ديزني",
+            image: "img/dany5/dany025.jpg",
+            link: "show6/show016.html",
+            year: "1994",
+            rating: "9.5"
+        }, {
+            title: "فوق Up",
+            description: "فيلم مغامرات رائع - من أفضل أفلام بيكسار",
+            image: "img/dany5/dany023.jpg",
+            link: "show6/show013.html",
+            year: "2009",
+            rating: "9.2"
+        }, {
+            title: "الشقيقان: رحلة خيالية",
+            description: "فيلم عائلي - مغامرة الأخوين",
+            image: "img/dany5/dany034.jpg",
+            link: "show6/show017.html",
+            year: "2020",
+            rating: "8.5"
+        }, {
+            title: "قلبا وقالبا",
+            description: "فيلم دراما رائع - من إبداعات بيكسار",
+            image: "img/dany5/dany022.jpg",
+            link: "show6/show015.html",
+            year: "2015",
+            rating: "8.9"
+        }, {
+            title: "روح Soul",
+            description: "فيلم دراما - موسيقى جاز رائعة",
+            image: "img/dany5/dany027.jpg",
+            link: "show6/show018.html",
+            year: "2020",
+            rating: "8.6"
+        }, {
+            title: "كونغ فو باندا",
+            description: "فيلم أكشن - بو والمحاربين",
             image: "img/dany5/dany04.jpg",
             link: "show6/show1.html",
-            year: "2011",
-            rating: "8.5",
-            category: "أكشن",
-            popularity: 9.0
+            year: "2008",
+            rating: "8.5"
         }, {
-            title: "بيت التنانين - مسلسل",
-            description: "مسلسل خيال علمي - عالم التنانين",
-            image: "img/dany5/dany01.jpg",
-            link: "show6/show8.html",
-            year: "2019",
-            rating: "9.0",
-            category: "خيال علمي",
-            popularity: 8.9
-        }, {
-            title: "حكاية لعبه - مسلسل",
-            description: "مسلسل كوميدي - مغامرات الألعاب",
+            title: "حكاية لعبة",
+            description: "فيلم كوميدي - وودي وباز يير",
             image: "img/dany5/dany016.jpg",
             link: "show6/show2.html",
-            year: "2013",
-            rating: "8.9",
-            category: "كوميدي",
-            popularity: 8.8
+            year: "1995",
+            rating: "8.9"
         }, {
-            title: "عصر الجليد - مسلسل",
-            description: "مسلسل كوميدي - سكرات والمغامرات",
+            title: "عصر الجليد",
+            description: "فيلم كوميدي - مانفريد وسيد",
             image: "img/dany5/dany08.jpg",
             link: "show6/show9.html",
-            year: "2015",
-            rating: "8.7",
-            category: "كوميدي",
-            popularity: 8.7
+            year: "2002",
+            rating: "8.7"
         }, {
-            title: "عائلة روبنسون - مسلسل",
-            description: "مسلسل مغامرات - اختراعات عجيبة",
-            image: "img/dany5/dany017.jpg",
-            link: "show6/show4.html",
-            year: "2009",
-            rating: "8.2",
-            category: "مغامرات",
-            popularity: 8.5
+            title: "ملكة الثلج",
+            description: "فيلم عائلي - مغامرة إلسا وآنا",
+            image: "img/dany5/dany02.jpg",
+            link: "show6/show10.html",
+            year: "2013",
+            rating: "8.4"
         }, {
-            title: "مريدا - مسلسل",
-            description: "مسلسل مغامرات - أميرة شجاعة",
+            title: "مريدا",
+            description: "فيلم مغامرات - أميرة أسكتلندا",
             image: "img/dany5/dany011.jpg",
             link: "show6/show7.html",
-            year: "2014",
-            rating: "8.3",
-            category: "مغامرات",
-            popularity: 8.4
+            year: "2012",
+            rating: "8.3"
         }, {
-            title: "ليله فى المتحف - مسلسل",
-            description: "مسلسل مغامرات - آثار تتحرك ليلاً",
+            title: "بيت التنانين",
+            description: "فيلم خيال علمي - عجائب التنانين",
+            image: "img/dany5/dany01.jpg",
+            link: "show6/show8.html",
+            year: "2010",
+            rating: "9.0"
+        }, {
+            title: "عائلة روبنسون",
+            description: "فيلم مغامرات - عائلة مخترعين",
+            image: "img/dany5/dany017.jpg",
+            link: "show6/show4.html",
+            year: "2007",
+            rating: "8.2"
+        }, {
+            title: "ليلة فى المتحف",
+            description: "فيلم مغامرات - متحف التاريخ الطبيعي",
             image: "img/dany5/dany019.jpg",
             link: "show6/show6.html",
-            year: "2016",
-            rating: "8.0",
-            category: "مغامرات",
-            popularity: 8.3
+            year: "2006",
+            rating: "8.0"
         }, {
-            title: "مزرعه فى خطر - مسلسل",
-            description: "مسلسل كوميدي - حيوانات مضحكة",
-            image: "img/dany5/dany018.jpg",
-            link: "show6/show5.html",
-            year: "2010",
-            rating: "7.5",
-            category: "كوميدي",
-            popularity: 8.2
+            title: "بن تن: سر الأومتريكس",
+            description: "فيلم أكشن - بن تن والساعة الفضائية",
+            image: "img/dany5/dany024.jpg",
+            link: "show6/show019.html",
+            year: "2007",
+            rating: "8.4"
         }, {
-            title: "النمله والجراد - مسلسل",
-            description: "مسلسل عائلي - عبرة وعظة",
+            title: "الفار الطباخ",
+            description: "فيلم كوميدي - ريمي الفأر الطباخ",
+            image: "img/dany5/dany035.jpg",
+            link: "show6/show014.html",
+            year: "2007",
+            rating: "8.8"
+        }, {
+            title: "الإمبراطور 2000",
+            description: "فيلم كوميدي - إمبراطور مشاكس",
+            image: "img/dany5/dany021.jpg",
+            link: "show6/show011.html",
+            year: "2000",
+            rating: "7.9"
+        }, {
+            title: "النملة والجراد",
+            description: "فيلم عائلي - قصة كفاح وكسل",
             image: "img/dany5/dany013.jpg",
             link: "show6/show3.html",
-            year: "2008",
-            rating: "7.8",
-            category: "عائلي",
-            popularity: 8.1
+            year: "2006",
+            rating: "7.8"
+        }, {
+            title: "مزرعة فى خطر",
+            description: "فيلم كوميدي - حيوانات المزرعة",
+            image: "img/dany5/dany018.jpg",
+            link: "show6/show5.html",
+            year: "2004",
+            rating: "7.5"
+        }, {
+            title: "الإمبراطور 2004",
+            description: "فيلم كوميدي - مغامرات جديدة",
+            image: "img/dany5/dany020.jpg",
+            link: "show6/show012.html",
+            year: "2004",
+            rating: "7.7"
         }];
 
-        // بيانات العروض - تكبير البيانات لعرض كروت كثيرة
+        // ========== 20 مسلسلاً ==========
+        const series = [{
+            title: "الأسد الملك",
+            description: "فيلم كرتون كلاسيكي - أعظم أفلام ديزني",
+            image: "img/dany5/dany025.jpg",
+            link: "show6/show016.html",
+            year: "1994",
+            rating: "9.5"
+        }, {
+            title: "فوق Up",
+            description: "فيلم مغامرات رائع - من أفضل أفلام بيكسار",
+            image: "img/dany5/dany023.jpg",
+            link: "show6/show013.html",
+            year: "2009",
+            rating: "9.2"
+        }, {
+            title: "الشقيقان: رحلة خيالية",
+            description: "فيلم عائلي - مغامرة الأخوين",
+            image: "img/dany5/dany034.jpg",
+            link: "show6/show017.html",
+            year: "2020",
+            rating: "8.5"
+        }, {
+            title: "قلبا وقالبا",
+            description: "فيلم دراما رائع - من إبداعات بيكسار",
+            image: "img/dany5/dany022.jpg",
+            link: "show6/show015.html",
+            year: "2015",
+            rating: "8.9"
+        }, {
+            title: "روح Soul",
+            description: "فيلم دراما - موسيقى جاز رائعة",
+            image: "img/dany5/dany027.jpg",
+            link: "show6/show018.html",
+            year: "2020",
+            rating: "8.6"
+        }, {
+            title: "كونغ فو باندا",
+            description: "فيلم أكشن - بو والمحاربين",
+            image: "img/dany5/dany04.jpg",
+            link: "show6/show1.html",
+            year: "2008",
+            rating: "8.5"
+        }, {
+            title: "حكاية لعبة",
+            description: "فيلم كوميدي - وودي وباز يير",
+            image: "img/dany5/dany016.jpg",
+            link: "show6/show2.html",
+            year: "1995",
+            rating: "8.9"
+        }, {
+            title: "عصر الجليد",
+            description: "فيلم كوميدي - مانفريد وسيد",
+            image: "img/dany5/dany08.jpg",
+            link: "show6/show9.html",
+            year: "2002",
+            rating: "8.7"
+        }, {
+            title: "ملكة الثلج",
+            description: "فيلم عائلي - مغامرة إلسا وآنا",
+            image: "img/dany5/dany02.jpg",
+            link: "show6/show10.html",
+            year: "2013",
+            rating: "8.4"
+        }, {
+            title: "مريدا",
+            description: "فيلم مغامرات - أميرة أسكتلندا",
+            image: "img/dany5/dany011.jpg",
+            link: "show6/show7.html",
+            year: "2012",
+            rating: "8.3"
+        }, {
+            title: "بيت التنانين",
+            description: "فيلم خيال علمي - عجائب التنانين",
+            image: "img/dany5/dany01.jpg",
+            link: "show6/show8.html",
+            year: "2010",
+            rating: "9.0"
+        }, {
+            title: "عائلة روبنسون",
+            description: "فيلم مغامرات - عائلة مخترعين",
+            image: "img/dany5/dany017.jpg",
+            link: "show6/show4.html",
+            year: "2007",
+            rating: "8.2"
+        }, {
+            title: "ليلة فى المتحف",
+            description: "فيلم مغامرات - متحف التاريخ الطبيعي",
+            image: "img/dany5/dany019.jpg",
+            link: "show6/show6.html",
+            year: "2006",
+            rating: "8.0"
+        }, {
+            title: "بن تن: سر الأومتريكس",
+            description: "فيلم أكشن - بن تن والساعة الفضائية",
+            image: "img/dany5/dany024.jpg",
+            link: "show6/show019.html",
+            year: "2007",
+            rating: "8.4"
+        }, {
+            title: "الفار الطباخ",
+            description: "فيلم كوميدي - ريمي الفأر الطباخ",
+            image: "img/dany5/dany035.jpg",
+            link: "show6/show014.html",
+            year: "2007",
+            rating: "8.8"
+        }, {
+            title: "الإمبراطور 2000",
+            description: "فيلم كوميدي - إمبراطور مشاكس",
+            image: "img/dany5/dany021.jpg",
+            link: "show6/show011.html",
+            year: "2000",
+            rating: "7.9"
+        }, {
+            title: "النملة والجراد",
+            description: "فيلم عائلي - قصة كفاح وكسل",
+            image: "img/dany5/dany013.jpg",
+            link: "show6/show3.html",
+            year: "2006",
+            rating: "7.8"
+        }, {
+            title: "مزرعة فى خطر",
+            description: "فيلم كوميدي - حيوانات المزرعة",
+            image: "img/dany5/dany018.jpg",
+            link: "show6/show5.html",
+            year: "2004",
+            rating: "7.5"
+        }, {
+            title: "الإمبراطور 2004",
+            description: "فيلم كوميدي - مغامرات جديدة",
+            image: "img/dany5/dany020.jpg",
+            link: "show6/show012.html",
+            year: "2004",
+            rating: "7.7"
+        }];
+
+        // بناء العروض
         let offers = [];
-        // نضيف الأفلام الأساسية
-        movies.forEach(movie => {
-            offers.push({...movie
-            });
-        });
-        // نضيف نسخ إضافية للأفلام
-        for (let i = 0; i < 5; i++) {
-            movies.slice(0, 12).forEach((movie, index) => {
-                offers.push({
-                    ...movie,
-                    title: movie.title + ' ' + (i + 2),
-                    year: 2020 + i,
-                    rating: (5 + Math.random() * 4).toFixed(1)
-                });
-            });
-        }
+        movies.forEach(m => offers.push({...m
+        }));
+        series.forEach(s => offers.push({...s
+        }));
 
-        const pageSize = 6; // كل مرة يفتح 6 كروت
+        const pageSize = 12;
         let offersIndex = 0;
-
-        // ========== FUNCTIONS ==========
-        function getRatingText(star) {
-            const texts = ["سيئ جداً", "سيئ", "متوسط", "جيد", "ممتاز"];
-            return texts[star - 1] || "";
-        }
 
         function renderCards(list, containerId) {
             const container = document.querySelector(containerId);
             if (!container) return;
-
             container.innerHTML = "";
             list.forEach((item, index) => {
-                const card = document.createElement("div");
-                card.className = "card";
-
                 const uniqueId = containerId.replace(/[^a-z0-9]/gi, '') + '-' + index;
                 const savedRating = localStorage.getItem('rating-' + uniqueId) || '0';
 
@@ -1549,27 +1567,21 @@
                     `;
                 }
 
+                const card = document.createElement("div");
+                card.className = "card";
                 card.innerHTML = `
                     <a href="${item.link}" class="card-link" target="_blank"></a>
                     <div class="poster">
                         <img src="${item.image}" alt="${item.title}" loading="lazy" draggable="false">
-                        <div class="play-overlay">
-                            <i class="fas fa-play"></i>
-                        </div>
-                        <div class="rating-badge">
-                            <i class="fas fa-star"></i> ${item.rating || '8.5'}
-                        </div>
-                        <div class="year-badge">
-                            ${item.year || '2025'}
-                        </div>
+                        <div class="play-overlay"><i class="fas fa-play"></i></div>
+                        <div class="rating-badge"><i class="fas fa-star"></i> ${item.rating}</div>
+                        <div class="year-badge">${item.year}</div>
                     </div>
                     <div class="data-list">
                         <h1>${item.title}</h1>
                         <p>${item.description}</p>
                         <div class="div-star">
-                            <div class="stars">
-                                ${starsHTML}
-                            </div>
+                            <div class="stars">${starsHTML}</div>
                             <p id="rating-text-${uniqueId}">${getRatingText(parseInt(savedRating))}</p>
                             <a href="${item.link}" class="button-star" target="_blank">شاهد الآن</a>
                         </div>
@@ -1579,27 +1591,25 @@
             });
         }
 
+        function getRatingText(star) {
+            const texts = ["سيئ جداً", "سيئ", "متوسط", "جيد", "ممتاز"];
+            return texts[star - 1] || "";
+        }
+
         function renderOffers() {
             const container = document.getElementById("cards-offers");
+            if (!container) return;
             const nextOffers = offers.slice(offersIndex, offersIndex + pageSize);
-
             nextOffers.forEach((item) => {
                 const card = document.createElement("div");
                 card.className = "card";
-
                 card.innerHTML = `
                     <a href="${item.link}" class="card-link" target="_blank"></a>
                     <div class="poster">
                         <img src="${item.image}" alt="${item.title}" loading="lazy" draggable="false">
-                        <div class="play-overlay">
-                            <i class="fas fa-play"></i>
-                        </div>
-                        <div class="rating-badge">
-                            <i class="fas fa-star"></i> ${item.rating}
-                        </div>
-                        <div class="year-badge">
-                            ${item.year}
-                        </div>
+                        <div class="play-overlay"><i class="fas fa-play"></i></div>
+                        <div class="rating-badge"><i class="fas fa-star"></i> ${item.rating}</div>
+                        <div class="year-badge">${item.year}</div>
                     </div>
                     <div class="data-list">
                         <h1>${item.title}</h1>
@@ -1609,10 +1619,10 @@
                 `;
                 container.appendChild(card);
             });
-
             offersIndex += pageSize;
             if (offersIndex >= offers.length) {
-                document.getElementById("load-more-offers").style.display = "none";
+                const btn = document.getElementById("load-more-offers");
+                if (btn) btn.style.display = "none";
             }
         }
 
@@ -1622,23 +1632,17 @@
                 renderCards(movies, "#cards-movies");
                 renderCards(series, "#cards-series");
             } else {
-                const filteredMovies = movies.filter(movie => movie.title.toLowerCase().includes(q));
-                const filteredSeries = series.filter(serie => serie.title.toLowerCase().includes(q));
-                renderCards(filteredMovies, "#cards-movies");
-                renderCards(filteredSeries, "#cards-series");
+                renderCards(movies.filter(m => m.title.toLowerCase().includes(q)), "#cards-movies");
+                renderCards(series.filter(s => s.title.toLowerCase().includes(q)), "#cards-series");
             }
         }
 
-        // ========== SCROLL FUNCTIONS ==========
-        let autoScrollInterval;
-        let pauseTimeout;
+        let autoScrollInterval, pauseTimeout;
 
         function autoScroll(containerId) {
             const container = document.querySelector(containerId);
             if (!container) return;
-
-            const maxScroll = container.scrollWidth - container.clientWidth;
-            if (container.scrollLeft >= maxScroll - 10) {
+            if (container.scrollLeft >= container.scrollWidth - container.clientWidth - 10) {
                 container.scrollLeft = 0;
             } else {
                 container.scrollBy({
@@ -1661,115 +1665,76 @@
             pauseTimeout = setTimeout(startAutoScroll, 20000);
         }
 
-        // ========== INITIALIZATION ==========
         document.addEventListener("DOMContentLoaded", function() {
-            // عرض البيانات - نبدأ بأول 12 كارت (صفين)
-            offersIndex = 0;
-            // نعرض أول 6 كروت
-            renderOffers(); // الصف الأول
-            // نعرض الـ 6 كروت التالية
-            renderOffers(); // الصف الثاني
-
             renderCards(movies, "#cards-movies");
             renderCards(series, "#cards-series");
+            renderOffers();
 
-            // زر تحميل المزيد
-            document.getElementById("load-more-offers").addEventListener("click", renderOffers);
+            const loadBtn = document.getElementById("load-more-offers");
+            if (loadBtn) loadBtn.addEventListener("click", renderOffers);
 
-            // البحث
-            const searchInput = document.getElementById("searchInput");
             const searchBtn = document.getElementById("searchBtn");
+            const searchInput = document.getElementById("searchInput");
+            if (searchBtn) searchBtn.addEventListener("click", () => filterCards(searchInput.value));
+            if (searchInput) searchInput.addEventListener("keydown", (e) => {
+                if (e.key === "Enter") filterCards(searchInput.value);
+            });
 
-            if (searchBtn && searchInput) {
-                searchBtn.addEventListener("click", function() {
-                    filterCards(searchInput.value);
+            const moviesLeft = document.querySelector('.movies-left');
+            const moviesRight = document.querySelector('.movies-right');
+            const seriesLeft = document.querySelector('.series-left');
+            const seriesRight = document.querySelector('.series-right');
+            const cardsMovies = document.querySelector('#cards-movies');
+            const cardsSeries = document.querySelector('#cards-series');
+
+            if (moviesLeft) moviesLeft.addEventListener('click', () => {
+                if (cardsMovies) cardsMovies.scrollBy({
+                    left: -800,
+                    behavior: 'smooth'
                 });
-                searchInput.addEventListener("keydown", function(e) {
-                    if (e.key === "Enter") filterCards(searchInput.value);
+                pauseAutoScroll();
+            });
+            if (moviesRight) moviesRight.addEventListener('click', () => {
+                if (cardsMovies) cardsMovies.scrollBy({
+                    left: 800,
+                    behavior: 'smooth'
                 });
-            }
-
-            // أزرار التمرير للأفلام
-            var moviesLeft = document.querySelector('.movies-left');
-            var moviesRight = document.querySelector('.movies-right');
-            var seriesLeft = document.querySelector('.series-left');
-            var seriesRight = document.querySelector('.series-right');
-            var cardsMovies = document.querySelector('#cards-movies');
-            var cardsSeries = document.querySelector('#cards-series');
-
-            if (moviesLeft) {
-                moviesLeft.addEventListener('click', function() {
-                    if (cardsMovies) cardsMovies.scrollBy({
-                        left: -800,
-                        behavior: 'smooth'
-                    });
-                    pauseAutoScroll();
+                pauseAutoScroll();
+            });
+            if (seriesLeft) seriesLeft.addEventListener('click', () => {
+                if (cardsSeries) cardsSeries.scrollBy({
+                    left: -800,
+                    behavior: 'smooth'
                 });
-            }
-
-            if (moviesRight) {
-                moviesRight.addEventListener('click', function() {
-                    if (cardsMovies) cardsMovies.scrollBy({
-                        left: 800,
-                        behavior: 'smooth'
-                    });
-                    pauseAutoScroll();
+                pauseAutoScroll();
+            });
+            if (seriesRight) seriesRight.addEventListener('click', () => {
+                if (cardsSeries) cardsSeries.scrollBy({
+                    left: 800,
+                    behavior: 'smooth'
                 });
-            }
+                pauseAutoScroll();
+            });
 
-            if (seriesLeft) {
-                seriesLeft.addEventListener('click', function() {
-                    if (cardsSeries) cardsSeries.scrollBy({
-                        left: -800,
-                        behavior: 'smooth'
-                    });
-                    pauseAutoScroll();
-                });
-            }
-
-            if (seriesRight) {
-                seriesRight.addEventListener('click', function() {
-                    if (cardsSeries) cardsSeries.scrollBy({
-                        left: 800,
-                        behavior: 'smooth'
-                    });
-                    pauseAutoScroll();
-                });
-            }
-
-            // بدء التمرير التلقائي
             startAutoScroll();
 
-            // شريط التحميل
-            window.addEventListener('scroll', function() {
-                var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-                var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-                var scrolled = (winScroll / height) * 100;
-                document.getElementById('loadingBar').style.width = scrolled + '%';
+            window.addEventListener('scroll', () => {
+                const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                document.getElementById('loadingBar').style.width = (winScroll / height) * 100 + '%';
+                const header = document.getElementById('header');
+                if (window.scrollY > 50) header.classList.add('scrolled');
+                else header.classList.remove('scrolled');
             });
 
-            // تغيير لون الهيدر عند التمرير
-            window.addEventListener('scroll', function() {
-                var header = document.getElementById('header');
-                if (window.scrollY > 50) {
-                    header.classList.add('scrolled');
-                } else {
-                    header.classList.remove('scrolled');
-                }
-            });
-
-            // تبديل الثيم (ليلي/نهاري)
-            var themeToggle = document.getElementById('themeToggle');
-            var themeIcon = themeToggle.querySelector('i');
-
-            var savedTheme = localStorage.getItem('theme');
-            if (savedTheme === 'light') {
+            const themeToggle = document.getElementById('themeToggle');
+            const themeIcon = themeToggle.querySelector('i');
+            if (localStorage.getItem('theme') === 'light') {
                 document.body.setAttribute('data-theme', 'light');
                 themeIcon.classList.remove('fa-moon');
                 themeIcon.classList.add('fa-sun');
             }
-
-            themeToggle.addEventListener('click', function() {
+            themeToggle.addEventListener('click', () => {
                 if (document.body.getAttribute('data-theme') === 'light') {
                     document.body.removeAttribute('data-theme');
                     themeIcon.classList.remove('fa-sun');
@@ -1783,50 +1748,43 @@
                 }
             });
 
-            // قائمة الموبايل
-            var menuToggle = document.getElementById('menuToggle');
-            var navMenu = document.querySelector('.nav-menu');
-
-            menuToggle.addEventListener('click', function() {
-                if (navMenu.style.display === 'flex') {
-                    navMenu.style.display = 'none';
-                } else {
-                    navMenu.style.display = 'flex';
-                    navMenu.style.position = 'absolute';
-                    navMenu.style.top = '100%';
-                    navMenu.style.left = '0';
-                    navMenu.style.right = '0';
-                    navMenu.style.background = 'var(--bg-secondary)';
-                    navMenu.style.padding = '1rem';
-                    navMenu.style.flexDirection = 'column';
-                    navMenu.style.alignItems = 'center';
-                }
-            });
-
-            // تحديث روابط التنشيط
-            var sections = ['movies', 'series', 'offers'];
-            window.addEventListener('scroll', function() {
-                var current = '';
-                sections.forEach(function(section) {
-                    var element = document.getElementById(section);
-                    if (element) {
-                        var rect = element.getBoundingClientRect();
-                        if (rect.top <= 100 && rect.bottom >= 100) {
-                            current = section;
-                        }
+            const menuToggle = document.getElementById('menuToggle');
+            const navMenu = document.querySelector('.nav-menu');
+            if (menuToggle) {
+                menuToggle.addEventListener('click', () => {
+                    if (navMenu.style.display === 'flex') {
+                        navMenu.style.display = 'none';
+                    } else {
+                        navMenu.style.display = 'flex';
+                        navMenu.style.position = 'absolute';
+                        navMenu.style.top = '100%';
+                        navMenu.style.left = '0';
+                        navMenu.style.right = '0';
+                        navMenu.style.background = 'var(--bg-secondary)';
+                        navMenu.style.padding = '1rem';
+                        navMenu.style.flexDirection = 'column';
+                        navMenu.style.alignItems = 'center';
                     }
                 });
+            }
 
-                document.querySelectorAll('.nav-menu a').forEach(function(link) {
-                    link.classList.remove('active');
-                    if (link.getAttribute('href') === '#' + current) {
-                        link.classList.add('active');
+            const sections = ['movies', 'series', 'offers'];
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const element = document.getElementById(section);
+                    if (element) {
+                        const rect = element.getBoundingClientRect();
+                        if (rect.top <= 100 && rect.bottom >= 100) current = section;
                     }
+                });
+                document.querySelectorAll('.nav-menu a').forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === '#' + current) link.classList.add('active');
                 });
             });
         });
 
-        // دالة التقييم (تكون في النطاق العام)
         window.getRatingText = getRatingText;
     </script>
 </body>
